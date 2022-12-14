@@ -1,0 +1,488 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>n-dynamic-renderer documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">n-dynamic-renderer documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="ndynamicrenderer">NDynamicRenderer</h1>
+<p>It is a library for loading Dynamic components of the respective libraries with full life-cycle support for inputs and outputs.</p>
+<p>This library accepts <strong>View</strong> and generates an UI as the following:</p>
+<p><img src="./screenshots/Expansion%20Panel.png" alt="alt text" class="img-responsive"></p>
+<p><img src="./screenshots/leaves.png" alt="alt text" class="img-responsive"></p>
+<p><strong>Look at the <a href="#view">&#39;View&#39;</a> how it is structured</strong></p>
+<h2 id="installation">Installation</h2>
+<p>$ npm install n-dynamic-renderer</p>
+<h2 id="usage">Usage</h2>
+<p>Download the <strong>Case Manager UI Renderer</strong> from the story</p>
+<p><img src="./screenshots/store.png" alt="alt text" class="img-responsive"></p>
+<p><img src="./screenshots/install.png" alt="alt text" class="img-responsive"></p>
+<p>Open &#39;Manage Plugins&#39;-&gt;Add Dependency-&gt;Enter Package Name,Version,Angular Package, Library name, Module Name and checkon the forRoot()</p>
+<p><img src="./screenshots/add%20dependency.png" alt="alt text" class="img-responsive"></p>
+<p><img src="./screenshots/forRoot.png" alt="alt text" class="img-responsive"></p>
+<p>Create a legacy service </p>
+<p><img src="./screenshots/create%20service.png" alt="alt text" class="img-responsive"></p>
+<p>Pass the libraryname and its components installed in the applications by preparing the following structure:</p>
+<div><pre class="line-numbers"><code class="language-js">[
+  {
+    library: &quot;Custom Library&quot;,
+    imports: {
+      className: InputClassComponent,
+    },
+  },
+];</code></pre></div><p><em>In the above configuration,&#39;library&#39; should be the library name .&#39;Imports&#39; is an object of key-value pair where key is the componentName it&#39;s value should be the actual component.</em></p>
+<p><em>You can prepare as many of an array of objects of library and imports as the following</em></p>
+<div><pre class="line-numbers"><code class="language-typescript">[
+  {
+    library1: &quot;Neutrinos Library1&quot;,
+    imports: {
+      &quot;InputClassComponent1&quot;: InputClassComponent1,
+    },
+  },
+   {
+    library2: &quot;Neutrinos Library2&quot;,
+    imports: {
+      &quot;InputClassComponent1&quot;: InputClassComponent2,
+      &quot;CheckBoxComponent&quot;: CheckBoxComponent,
+      &quot;HomePageComponent&quot;: HomePageComponent
+    },
+  },
+];</code></pre></div><p>The above configuration can be passed to the library as the following:</p>
+<div><pre class="line-numbers"><code class="language-typescript">
+import { NdynamicRendererModule } from ‘n-dynamic-renderer‘
+
+ constructor(private NDynamicRendererModule: NDynamicRendererModule) {}
+
+import { NDynamicRendererModule } from &#39;n-dynamic-renderer&#39;
+&#64;Injectable()
+export class dynamicrendererService {
+    rendererImports;
+    nComponentModules
+    constructor(private NDynamicRendererModule: NDynamicRendererModule) {
+        this.nComponentModules = { ...inputComponent, ...input1Component }
+    }
+
+    resetRendererComponents() {
+        let config = [
+            {
+                library: &quot;Neutrinos Library1&quot;,
+                imports: {
+                    &quot;InputClassComponent1&quot;: InputClassComponent1,
+                },
+            },
+            {
+                library: &quot;Neutrinos Library2&quot;,
+                imports: {
+                    &quot;InputClassComponent1&quot;: InputClassComponent2,
+                    &quot;CheckBoxComponent&quot;: CheckBoxComponent,
+                    &quot;HomePageComponent&quot;: HomePageComponent
+                },
+            },
+        ];
+        this.NDynamicRendererModule.resetConfig(config);
+    }
+
+}
+</code></pre></div><p>Add the above code in the legacy service created</p>
+<p><img src="./screenshots/dynamicrendererservice.png" alt="alt dynamicrendererservice" class="img-responsive"></p>
+<hr>
+<h2 id="options">Options</h2>
+<ul>
+<li><a href="#model">[(model)]</a></li>
+<li><a href="#view">[view]</a></li>
+<li><a href="#schema">[schema]</a></li>
+<li><a href="#onerror">(onError)</a></li>
+</ul>
+<h4 id="model">[model]</h4>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[(model)]</td>
+<td>object</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p>Accepts an object which should follow the <strong><em>Schema</em></strong>.Supports two way data binding as well.</p>
+<div><pre class="line-numbers"><code class="language-typescript">[model] = &quot;model&quot;;</code></pre></div><hr>
+<h4 id="view">[view]</h4>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[view]</td>
+<td>Array</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p><strong><em>View</em></strong> defines how the UI should render.</p>
+<p>Define <em><a href="../interfaces/Panels.html">view</a></em> in your component&#39;s class</p>
+<div><pre class="line-numbers"><code class="language-typescript">View = [
+  {
+    panel_name: &quot;Coverage Details&quot;,
+    styles: {
+      &quot;show-border&quot;: false,
+    },
+    class:&quot;panel_color&quot;,
+    expanded: true,
+    sections: [
+      {
+        section: {
+          layout: {
+              mobile: {
+                flex: &#39;100&#39;,
+              },
+              tablet: {
+                flex: &#39;100&#39;,
+              },
+              desktop: {
+                flex: &#39;100&#39;,
+              },
+              tv: {
+                flex: &#39;100&#39;,
+              },
+            },
+            styles:{
+              color:&#39;red&#39;
+            }
+          leafs: [
+            {
+              styles: {},
+              layout: {
+                  mobile: {
+                    flex: &#39;100&#39;,
+                  },
+                  tablet: {
+                    flex: &#39;100&#39;,
+                  },
+                  desktop: {
+                    flex: &#39;100&#39;,
+                  },
+                  tv: {
+                    flex: &#39;100&#39;,
+                  },
+              },
+              id: &quot;uuid1&quot;,
+              metadata: {
+                version: &quot;14.2.0&quot;,
+                library: &quot;manulife&quot;,
+                component_name: &quot;NMatButtonComponent&quot;,
+                options: {
+                  label: &quot;Save&quot;,
+                  output_events: {
+                    change_event: {
+                      functions: [
+                        {
+                          functionName: &quot;getMessage1&quot;,
+                          arguments: [1, 2, 3],
+                        },
+                        {
+                          functionName: &quot;getMessage2&quot;,
+                          arguments: [1, 2],
+                        },
+                        {
+                          functionName: &quot;getMessage3&quot;,
+                        },
+                      ],
+                    },
+                  },
+                },
+                expression: {
+                  $eq: [
+                    &quot;&#64;case.caseDetails.primaryLife.PersonalDetails.sex&quot;,
+                    &quot;Female&quot;,
+                  ],
+                },
+                updateOn: &quot;&quot;,
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+];
+</code></pre></div><p>Then add in component&#39;s template</p>
+<div><pre class="line-numbers"><code class="language-typescript">[view] = &quot;View&quot;;</code></pre></div><p>Every level in the <strong>View</strong> has <em>&#39;styles&#39;</em>,<em>&#39;layout&#39;</em> and <em>&#39;class&#39;</em> in common where we defines CSS Styles as key value pairs in <em>styles</em> object , add responsive flex properties for mobile,tablet,desktop and tv in <em>layout</em> object ,define classes that are present in the library</p>
+<ul>
+<li>Layout desides the width of the <strong>View</strong> components on the UI for respective screen resolutions.Set Layout properties accordingly.</li>
+</ul>
+<p><a href="../components/NDynamicRendererComponent.html"><strong><em>Understand the &#39;View&#39; better here</em></strong></a></p>
+<p> To understand how Library generates UI .<a href="../components/NDynamicRendererComponent.html#template">Have a look here!</a></p>
+<hr>
+<h4 id="schema">[schema]</h4>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[schema]</td>
+<td>object</td>
+<td>Required</td>
+</tr>
+</tbody>
+</table>
+<p>The schema for the <strong><em>Model</em></strong>.</p>
+<div><pre class="line-numbers"><code class="language-typescript">[schema] = &quot;schema&quot;;</code></pre></div><h4 id="onerror">onError()</h4>
+<p>Error handling callback.</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(onError)</td>
+<td><em>callback</em></td>
+<td><em>Optional</em></td>
+</tr>
+</tbody>
+</table>
+<p>Define callback in your component&#39;s class</p>
+<div><pre class="line-numbers"><code class="language-typescript">onError(error: any) {
+  // do anything
+}</code></pre></div><p>Then add in component&#39;s template</p>
+<div><pre class="line-numbers"><code class="language-typescript">onError = &quot;onError($event)&quot;;</code></pre></div><h2 id="example">Example</h2>
+<p><img src="./screenshots/renderer.png" alt="alt text" class="img-responsive"></p>
+<p><img src="./screenshots/component.png" alt="alt text" class="img-responsive"></p>
+<div><pre class="line-numbers"><code class="language-typescript">&#64;Component({
+  selector: &quot;app-root&quot;,
+  templateUrl: `
+   &lt;n-dynamic-renderer
+     [view]=&quot;view&quot;
+     [(model)]=&quot;model&quot;
+     [schema]=&quot;schema&quot;
+     (onError)=&quot;onError($event)&quot;
+   &gt;&lt;/n-dynamic-renderer&gt; 
+  `,
+  styleUrls: [&quot;./app.component.css&quot;],
+})
+export class AppComponent {
+  schema = {
+    $id: &quot;https://example.com/object1666938433.json&quot;,
+    title: &quot;Generated schema for Root&quot;,
+    type: &quot;object&quot;,
+    properties: {
+      case: {
+        type: &quot;object&quot;,
+        properties: {},
+      },
+    },
+  };
+  model = {
+    case: {},
+  };
+
+  view =[
+  {
+    panel_name: &quot;Coverage Details&quot;,
+    styles: {
+      &quot;show-border&quot;: false,
+    },
+    class:&quot;panel_color&quot;,
+    expanded: true,
+    sections: [
+      {
+        section: {
+          layout: {
+              mobile: {
+                flex: &#39;100&#39;,
+              },
+              tablet: {
+                flex: &#39;100&#39;,
+              },
+              desktop: {
+                flex: &#39;100&#39;,
+              },
+              tv: {
+                flex: &#39;100&#39;,
+              },
+            },
+            styles:{
+              color:&#39;red&#39;
+            }
+          leafs: [
+            {
+              styles: {},
+              layout: {
+                  mobile: {
+                    flex: &#39;100&#39;,
+                  },
+                  tablet: {
+                    flex: &#39;100&#39;,
+                  },
+                  desktop: {
+                    flex: &#39;100&#39;,
+                  },
+                  tv: {
+                    flex: &#39;100&#39;,
+                  },
+              },
+              id: &quot;uuid1&quot;,
+              metadata: {
+                version: &quot;14.2.0&quot;,
+                library: &quot;manulife&quot;,
+                component_name: &quot;NMatButtonComponent&quot;,
+                options: {
+                  label: &quot;Save&quot;,
+                  output_events: {
+                    change_event: {
+                      functions: [
+                        {
+                          functionName: &quot;getMessage1&quot;,
+                          arguments: [1, 2, 3],
+                        },
+                        {
+                          functionName: &quot;getMessage2&quot;,
+                          arguments: [1, 2],
+                        },
+                        {
+                          functionName: &quot;getMessage3&quot;,
+                        },
+                      ],
+                    },
+                  },
+                },
+                expression: {
+                  $eq: [
+                    &quot;&#64;case.caseDetails.primaryLife.PersonalDetails.sex&quot;,
+                    &quot;Female&quot;,
+                  ],
+                },
+                updateOn: &quot;&quot;,
+              },
+            },
+          ],
+        },
+      },
+    ],
+  },
+];
+}</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
