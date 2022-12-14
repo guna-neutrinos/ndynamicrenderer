@@ -1,7 +1,7 @@
 # NDynamicRenderer
 
 
-It is a library for loading Dynamic components of the respective libraries with full life-cycle support for inputs and outputs.
+It is a library for rendering components of the respective libraries with full life-cycle support for inputs and outputs dynamically.
 
 This library accepts **View** and generates an UI as the following:
 
@@ -253,9 +253,9 @@ Every level in the __View__ has _'styles'_,_'layout'_ and _'class'_ in common wh
 
 * Layout desides the width of the __View__ components on the UI for respective screen resolutions.Set Layout properties accordingly.
 
-[**_Understand the 'View' better here_**](../interfaces/Panels.htmll#template)
+[**_Understand the 'View' better here_**](../components/NDynamicRendererComponent.html)
  
- To understand how Library generates UI .[Have a look here!](../components/NDynamicRendererComponent.html)
+ To understand how Library generates UI .[Have a look here!](../components/NDynamicRendererComponent.html#template)
 
 
 ___

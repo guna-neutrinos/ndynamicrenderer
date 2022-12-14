@@ -112,9 +112,6 @@
     <li  class="active" >
         <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
     </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
 </ul>
 
 <div class="tab-content">
@@ -179,12 +176,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer.module.ts:32</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -259,12 +250,6 @@
             </tr>
 
 
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="51"
-                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer.module.ts:51</a></div>
-                </td>
-            </tr>
 
 
             <tr>
@@ -316,63 +301,6 @@
     </div>
 
 
-    <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { ModuleWithProviders, NgModule } from &#x27;@angular/core&#x27;;
-import { NDynamicRendererComponent } from &#x27;./n-dynamic-renderer/n-dynamic-renderer.component&#x27;;
-import { DynamicModule } from &#x27;ng-dynamic-component&#x27;;
-import { MatExpansionModule } from &#x27;@angular/material/expansion&#x27;;
-import { MatCardModule } from &#x27;@angular/material/card&#x27;;
-import { MatInputModule } from &#x27;@angular/material/input&#x27;;
-import { FormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
-import { CommonModule } from &#x27;@angular/common&#x27;;
-import { FlexLayoutModule } from &#x27;@angular/flex-layout&#x27;;
-import { NDynamicRendererService } from &#x27;./n-dynamic-renderer.service&#x27;;
-import { Config } from &#x27;./interfaces/interface&#x27;;
-@NgModule({
-  declarations: [NDynamicRendererComponent],
-  imports: [
-    MatExpansionModule,
-    MatCardModule,
-    DynamicModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule,
-    CommonModule,
-    FlexLayoutModule,
-  ],
-  exports: [NDynamicRendererComponent],
-})
-export class NDynamicRendererModule {
-  constructor(private NDynamicRendererService: NDynamicRendererService) {}
-  /**
-   * Creates and configures a module with all the required libraries and their components provided.
-   * @param config {Config[]}- The config which contains the libraryName and its imports.
-   */
-  static forRoot(
-    config?: Config[]
-  ): ModuleWithProviders&lt;NDynamicRendererModule&gt; {
-    return {
-      ngModule: NDynamicRendererModule,
-      providers: [
-        NDynamicRendererService,
-        { provide: &#x27;config&#x27;, useValue: config },
-      ],
-    };
-  }
-
-  public get config() {
-    return this.NDynamicRendererService.config;
-  }
-  /**
-   * Resets the config i.e., the imports modules.
-   * @param config
-   */
-  public resetConfig(config: Config[]) {
-    this.NDynamicRendererService.resetConfig &#x3D; config;
-  }
-}
-</code></pre>
-    </div>
 </div>
 
 
