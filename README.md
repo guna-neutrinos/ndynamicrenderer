@@ -24,7 +24,7 @@ Download the __Case Manager UI Renderer__ from the story
 
 ![alt text](./screenshots/install.png)
 
-Open 'Manage Plugins'->Add Dependency->Enter Package Name,Version,Angular Package, Library name, Module Name and checkon the forRoot()
+Open 'Manage Plugins'->Add Dependency->Enter Package Name,Version,Angular Package, Library name, Module Name and checkon the forRoot() and click on the + button to add the module.
 
 ![alt text](./screenshots/add%20dependency.png)
 
@@ -64,7 +64,7 @@ _You can prepare as many of an array of objects of library and imports as the fo
    {
     library: "Neutrinos Library2",
     imports: {
-      "InputClassComponent1": InputClassComponent2,
+      "InputClassComponent1": InputClassComponent1,
       "CheckBoxComponent": CheckBoxComponent,
       "HomePageComponent": HomePageComponent
     },
@@ -77,39 +77,33 @@ The above configuration can be passed to the library as the following:
 
 ```typescript
 
-import { NdynamicRendererModule } from ‘n-dynamic-renderer‘
+import * as nComponents from 'n-components';
+import * as inputComponent from '../../components/dynamic/input.component'
+import * as input1Component from '../../components/dynamic/input1.component'
+import {NDynamicRendererModule} from 'n-dynamic-renderer'
 
- constructor(private NDynamicRendererModule: NDynamicRendererModule) {}
-
-import { NDynamicRendererModule } from 'n-dynamic-renderer'
 @Injectable()
 export class dynamicrendererService {
     rendererImports;
     nComponentModules
     constructor(private NDynamicRendererModule: NDynamicRendererModule) {
-        this.nComponentModules = { ...inputComponent, ...input1Component }
+        this.nComponentModules={...inputComponent,...input1Component}
     }
-
+    
     resetRendererComponents() {
         let config = [
             {
-                library: "Neutrinos Library1",
-                imports: {
-                    "InputClassComponent1": InputClassComponent1,
-                },
+                library: 'n-components',
+                imports: { ...nComponents },
             },
             {
-                library: "Neutrinos Library2",
-                imports: {
-                    "InputClassComponent1": InputClassComponent2,
-                    "CheckBoxComponent": CheckBoxComponent,
-                    "HomePageComponent": HomePageComponent
-                },
-            },
+                library: 'appComponents',
+                imports: {...this.nComponentModules},
+            }
         ];
         this.NDynamicRendererModule.resetConfig(config);
+        console.log(config)
     }
-
 }
 
 ```
@@ -150,7 +144,7 @@ Accepts an object which should follow the **_Schema_**.Supports two way data bin
 
 **_View_** defines how the UI should render.
 
-Define _[view](../interfaces/Panels.html)_ in your component's class
+Define __view__ in your component's class
 
 ```typescript
 View = [
@@ -253,11 +247,7 @@ Every level in the __View__ has _'styles'_,_'layout'_ and _'class'_ in common wh
 
 * Layout desides the width of the __View__ components on the UI for respective screen resolutions.Set Layout properties accordingly.
 
-[**_Understand the 'View' better here_**](../components/NDynamicRendererComponent.html)
  
- To understand how Library generates UI .[Have a look here!](../components/NDynamicRendererComponent.html#template)
-
-
 ___
 
 #### [schema]

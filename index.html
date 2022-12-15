@@ -43,7 +43,7 @@
 <p>Download the <strong>Case Manager UI Renderer</strong> from the story</p>
 <p><img src="./screenshots/store.png" alt="alt text" class="img-responsive"></p>
 <p><img src="./screenshots/install.png" alt="alt text" class="img-responsive"></p>
-<p>Open &#39;Manage Plugins&#39;-&gt;Add Dependency-&gt;Enter Package Name,Version,Angular Package, Library name, Module Name and checkon the forRoot()</p>
+<p>Open &#39;Manage Plugins&#39;-&gt;Add Dependency-&gt;Enter Package Name,Version,Angular Package, Library name, Module Name and checkon the forRoot() and click on the + button to add the module.</p>
 <p><img src="./screenshots/add%20dependency.png" alt="alt text" class="img-responsive"></p>
 <p><img src="./screenshots/forRoot.png" alt="alt text" class="img-responsive"></p>
 <p>Create a legacy service </p>
@@ -68,46 +68,40 @@
    {
     library: &quot;Neutrinos Library2&quot;,
     imports: {
-      &quot;InputClassComponent1&quot;: InputClassComponent2,
+      &quot;InputClassComponent1&quot;: InputClassComponent1,
       &quot;CheckBoxComponent&quot;: CheckBoxComponent,
       &quot;HomePageComponent&quot;: HomePageComponent
     },
   },
 ];</code></pre></div><p>The above configuration can be passed to the library as the following:</p>
 <div><pre class="line-numbers"><code class="language-typescript">
-import { NdynamicRendererModule } from ‘n-dynamic-renderer‘
+import * as nComponents from &#39;n-components&#39;;
+import * as inputComponent from &#39;../../components/dynamic/input.component&#39;
+import * as input1Component from &#39;../../components/dynamic/input1.component&#39;
+import {NDynamicRendererModule} from &#39;n-dynamic-renderer&#39;
 
- constructor(private NDynamicRendererModule: NDynamicRendererModule) {}
-
-import { NDynamicRendererModule } from &#39;n-dynamic-renderer&#39;
 &#64;Injectable()
 export class dynamicrendererService {
     rendererImports;
     nComponentModules
     constructor(private NDynamicRendererModule: NDynamicRendererModule) {
-        this.nComponentModules = { ...inputComponent, ...input1Component }
+        this.nComponentModules={...inputComponent,...input1Component}
     }
-
+    
     resetRendererComponents() {
         let config = [
             {
-                library: &quot;Neutrinos Library1&quot;,
-                imports: {
-                    &quot;InputClassComponent1&quot;: InputClassComponent1,
-                },
+                library: &#39;n-components&#39;,
+                imports: { ...nComponents },
             },
             {
-                library: &quot;Neutrinos Library2&quot;,
-                imports: {
-                    &quot;InputClassComponent1&quot;: InputClassComponent2,
-                    &quot;CheckBoxComponent&quot;: CheckBoxComponent,
-                    &quot;HomePageComponent&quot;: HomePageComponent
-                },
-            },
+                library: &#39;appComponents&#39;,
+                imports: {...this.nComponentModules},
+            }
         ];
         this.NDynamicRendererModule.resetConfig(config);
+        console.log(config)
     }
-
 }
 </code></pre></div><p>Add the above code in the legacy service created</p>
 <p><img src="./screenshots/dynamicrendererservice.png" alt="alt dynamicrendererservice" class="img-responsive"></p>
@@ -156,7 +150,7 @@ export class dynamicrendererService {
 </tbody>
 </table>
 <p><strong><em>View</em></strong> defines how the UI should render.</p>
-<p>Define <em><a href="../interfaces/Panels.html">view</a></em> in your component&#39;s class</p>
+<p>Define <strong>view</strong> in your component&#39;s class</p>
 <div><pre class="line-numbers"><code class="language-typescript">View = [
   {
     panel_name: &quot;Coverage Details&quot;,
@@ -247,8 +241,6 @@ export class dynamicrendererService {
 <ul>
 <li>Layout desides the width of the <strong>View</strong> components on the UI for respective screen resolutions.Set Layout properties accordingly.</li>
 </ul>
-<p><a href="../components/NDynamicRendererComponent.html"><strong><em>Understand the &#39;View&#39; better here</em></strong></a></p>
-<p> To understand how Library generates UI .<a href="../components/NDynamicRendererComponent.html#template">Have a look here!</a></p>
 <hr>
 <h4 id="schema">[schema]</h4>
 <table class="table table-bordered compodoc-table">
