@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>n-dynamic-renderer documentation</title>
+        <title>manulife-ui-libraries documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,8 +13,8 @@
     </head>
     <body>
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="./" class="navbar-brand">n-dynamic-renderer documentation</a>
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="./" class="navbar-brand">manulife-ui-libraries documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -31,15 +31,15 @@
                <div class="content getting-started">
                    <div class="content-data">
 
-<h1 id="ndynamicrenderer">NDynamicRenderer</h1>
+<h1>NDynamicRenderer</h1>
 <p>It is a library for rendering components of the respective libraries with full life-cycle support for inputs and outputs dynamically.</p>
 <p>This library accepts <strong>View</strong> and generates an UI as the following:</p>
 <p><img src="./screenshots/Expansion%20Panel.png" alt="alt text" class="img-responsive"></p>
 <p><img src="./screenshots/leaves.png" alt="alt text" class="img-responsive"></p>
 <p><strong>Look at the <a href="#view">&#39;View&#39;</a> how it is structured</strong></p>
-<h2 id="installation">Installation</h2>
+<h2>Installation</h2>
 <p>$ npm install n-dynamic-renderer</p>
-<h2 id="usage">Usage</h2>
+<h2>Usage</h2>
 <p>Download the <strong>Case Manager UI Renderer</strong> from the story</p>
 <p><img src="./screenshots/store.png" alt="alt text" class="img-responsive"></p>
 <p><img src="./screenshots/install.png" alt="alt text" class="img-responsive"></p>
@@ -105,19 +105,16 @@ export class dynamicrendererService {
 }
 </code></pre></div><p>Add the above code in the legacy service created</p>
 <p><img src="./screenshots/dynamicrendererservice.png" alt="alt dynamicrendererservice" class="img-responsive"></p>
-<p>Now call the &#39;<strong>resetRendererComponents</strong>&#39; method that we have created in the <strong>dynamicRendererService</strong>.</p>
-<p>To do that first we need to inject the service in the component.</p>
-<p><img src="./screenshots/callingServiceInComponent.png" alt="alt dynamicrendererservice" class="img-responsive"></p>
-<p><img src="./screenshots/callInscript.png" alt="alt dynamicrendererservice" class="img-responsive"></p>
 <hr>
-<h2 id="options">Options</h2>
+<h2>Options</h2>
 <ul>
 <li><a href="#model">[(model)]</a></li>
 <li><a href="#view">[view]</a></li>
 <li><a href="#schema">[schema]</a></li>
 <li><a href="#onerror">(onError)</a></li>
+<li><a href="#changeDetection">(changeDetection)</a></li>
 </ul>
-<h4 id="model">[model]</h4>
+<h4>[model]</h4>
 <table class="table table-bordered compodoc-table">
 <thead>
 <tr>
@@ -136,7 +133,7 @@ export class dynamicrendererService {
 </table>
 <p>Accepts an object which should follow the <strong><em>Schema</em></strong>.Supports two way data binding as well.</p>
 <div><pre class="line-numbers"><code class="language-typescript">[model] = &quot;model&quot;;</code></pre></div><hr>
-<h4 id="view">[view]</h4>
+<h4>[view]</h4>
 <table class="table table-bordered compodoc-table">
 <thead>
 <tr>
@@ -156,97 +153,183 @@ export class dynamicrendererService {
 <p><strong><em>View</em></strong> defines how the UI should render.</p>
 <p>Define <strong>view</strong> in your component&#39;s class</p>
 <div><pre class="line-numbers"><code class="language-typescript">View = [
-  {
-    panel_name: &quot;Coverage Details&quot;,
-    styles: {
-      &quot;show-border&quot;: false,
-    },
-    class:&quot;panel_color&quot;,
-    expanded: true,
-    sections: [
-      {
-        section: {
-          layout: {
-              mobile: {
-                flex: &#39;100&#39;,
-              },
-              tablet: {
-                flex: &#39;100&#39;,
-              },
-              desktop: {
-                flex: &#39;100&#39;,
-              },
-              tv: {
-                flex: &#39;100&#39;,
-              },
-            },
-            styles:{
-              color:&#39;red&#39;
-            }
-          leafs: [
-            {
-              styles: {},
-              layout: {
-                  mobile: {
-                    flex: &#39;100&#39;,
-                  },
-                  tablet: {
-                    flex: &#39;100&#39;,
-                  },
-                  desktop: {
-                    flex: &#39;100&#39;,
-                  },
-                  tv: {
-                    flex: &#39;100&#39;,
-                  },
-              },
-              id: &quot;uuid1&quot;,
-              metadata: {
-                version: &quot;14.2.0&quot;,
-                library: &quot;manulife&quot;,
-                component_name: &quot;NMatButtonComponent&quot;,
-                options: {
-                  label: &quot;Save&quot;,
-                  output_events: {
-                    change_event: {
-                      functions: [
-                        {
-                          functionName: &quot;getMessage1&quot;,
-                          arguments: [1, 2, 3],
-                        },
-                        {
-                          functionName: &quot;getMessage2&quot;,
-                          arguments: [1, 2],
-                        },
-                        {
-                          functionName: &quot;getMessage3&quot;,
-                        },
-                      ],
-                    },
-                  },
-                },
-                expression: {
-                  $eq: [
-                    &quot;&#64;case.caseDetails.primaryLife.PersonalDetails.sex&quot;,
-                    &quot;Female&quot;,
-                  ],
-                },
-                updateOn: &quot;&quot;,
-              },
-            },
-          ],
+   {
+      &quot;icon&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;pb2 pr-p3&quot;,
+      &quot;layout&quot;: {
+        &quot;tv&quot;: {
+          &quot;flex&quot;: &quot;100&quot;
         },
+        &quot;mobile&quot;: {
+          &quot;flex&quot;: &quot;100&quot;
+        },
+        &quot;tablet&quot;: {
+          &quot;flex&quot;: &quot;100&quot;
+        },
+        &quot;desktop&quot;: {
+          &quot;flex&quot;: &quot;100&quot;
+        }
       },
-    ],
-  },
-];
+      &quot;styles&quot;: {},
+      &quot;expanded&quot;: false,
+      &quot;sections&quot;: [
+        {
+          &quot;section&quot;: {
+            &quot;class&quot;: &quot;section-card-nm&quot;,
+            &quot;leafs&quot;: [
+              {
+                &quot;layout&quot;: {
+                  &quot;tv&quot;: {
+                    &quot;flex&quot;: &quot;30&quot;
+                  },
+                  &quot;mobile&quot;: {
+                    &quot;flex&quot;: &quot;100&quot;
+                  },
+                  &quot;tablet&quot;: {
+                    &quot;flex&quot;: &quot;50&quot;
+                  },
+                  &quot;desktop&quot;: {
+                    &quot;flex&quot;: &quot;30&quot;
+                  }
+                },
+                &quot;styles&quot;: {},
+                &quot;metadata&quot;: {
+                  &quot;library&quot;: &quot;manulife-components&quot;,
+                  &quot;options&quot;: {
+                    &quot;label&quot;: &quot;ID Type&quot;,
+                    &quot;options&quot;: [],
+                    &quot;model_path&quot;: &quot;&#64;client_details.idType&quot;,
+                    &quot;validations&quot;: {
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: true,
+                      &quot;dependencyValidations&quot;: [
+                        {
+                          &quot;validations&quot;: {
+                            &quot;required&quot;: true,
+                            &quot;idNoLengthCheckValidator&quot;: true
+                          },
+                          &quot;required_value&quot;: {
+                            &quot;$or&quot;: [
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;1&quot;
+                                ]
+                              },
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;7&quot;
+                                ]
+                              }
+                            ]
+                          },
+                          &quot;target_model_path&quot;: &quot;&#64;client_details.idNo&quot;,
+                          &quot;current_model_path&quot;: &quot;&#64;client_details.idType&quot;
+                        },
+                       
+                        {
+                          &quot;validations&quot;: {
+                            &quot;required&quot;: true,
+                            &quot;maxLength&quot;: 20,
+                            &quot;noSpecialCharactersValidator&quot;: true
+                          },
+                          &quot;required_value&quot;: {
+                            &quot;$or&quot;: [
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;2&quot;
+                                ]
+                              },
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;3&quot;
+                                ]
+                              }
+                            ]
+                          },
+                          &quot;target_model_path&quot;: &quot;&#64;client_details.idNo&quot;,
+                          &quot;current_model_path&quot;: &quot;&#64;client_details.idType&quot;
+                        },
+                        {
+                          &quot;validations&quot;: {
+                            &quot;required&quot;: true
+                          },
+                          &quot;required_value&quot;: {
+                            &quot;$or&quot;: [
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;1&quot;
+                                ]
+                              }
+                            ]
+                          },
+                          &quot;target_model_path&quot;: &quot;&#64;client_details.dateOfIssue&quot;,
+                          &quot;current_model_path&quot;: &quot;&#64;client_details.idType&quot;
+                        }
+                      ]
+                    },
+                    &quot;output_events&quot;: {
+                      &quot;functions&quot;: [
+                        {
+                          &quot;functionName&quot;: &quot;modifyValidations&quot;
+                        },
+                        {
+                          &quot;functionName&quot;: &quot;idType1validation&quot;
+                        }
+                      ]
+                    },
+                    &quot;initialize_functions&quot;: {
+                      &quot;functions&quot;: [
+                        {
+                          &quot;functionName&quot;: &quot;modifyValidations&quot;
+                        },
+                        {
+                          &quot;functionName&quot;: &quot;idType1validation&quot;
+                        }
+                      ]
+                    }
+                  },
+                  &quot;updateOn&quot;: &quot;blur&quot;,
+                  &quot;component_name&quot;: &quot;DropDownComponent&quot;
+                }
+              }
+            ],
+            &quot;layout&quot;: {
+              &quot;tv&quot;: {
+                &quot;flex&quot;: &quot;100&quot;
+              },
+              &quot;mobile&quot;: {
+                &quot;flex&quot;: &quot;100&quot;
+              },
+              &quot;tablet&quot;: {
+                &quot;flex&quot;: &quot;100&quot;
+              },
+              &quot;desktop&quot;: {
+                &quot;flex&quot;: &quot;100&quot;
+              }
+            },
+            &quot;styles&quot;: {
+              &quot;margin&quot;: &quot;1em 0em 1em 0em&quot;,
+              &quot;padding&quot;: &quot;1em&quot;
+            },
+            &quot;section_name&quot;: &quot;client_details&quot;
+          }
+        }
+      ],
+      &quot;panel_name&quot;: &quot;Policy Owner&quot;
+    }
+]
 </code></pre></div><p>Then add in component&#39;s template</p>
 <div><pre class="line-numbers"><code class="language-typescript">[view] = &quot;View&quot;;</code></pre></div><p>Every level in the <strong>View</strong> has <em>&#39;styles&#39;</em>,<em>&#39;layout&#39;</em> and <em>&#39;class&#39;</em> in common where we defines CSS Styles as key value pairs in <em>styles</em> object , add responsive flex properties for mobile,tablet,desktop and tv in <em>layout</em> object ,define classes that are present in the library</p>
 <ul>
 <li>Layout desides the width of the <strong>View</strong> components on the UI for respective screen resolutions.Set Layout properties accordingly.</li>
 </ul>
 <hr>
-<h4 id="schema">[schema]</h4>
+<h4>[schema]</h4>
 <table class="table table-bordered compodoc-table">
 <thead>
 <tr>
@@ -264,7 +347,7 @@ export class dynamicrendererService {
 </tbody>
 </table>
 <p>The schema for the <strong><em>Model</em></strong>.</p>
-<div><pre class="line-numbers"><code class="language-typescript">[schema] = &quot;schema&quot;;</code></pre></div><h4 id="onerror">onError()</h4>
+<div><pre class="line-numbers"><code class="language-typescript">[schema] = &quot;schema&quot;;</code></pre></div><h4>onError()</h4>
 <p>Error handling callback.</p>
 <table class="table table-bordered compodoc-table">
 <thead>
@@ -286,7 +369,29 @@ export class dynamicrendererService {
 <div><pre class="line-numbers"><code class="language-typescript">onError(error: any) {
   // do anything
 }</code></pre></div><p>Then add in component&#39;s template</p>
-<div><pre class="line-numbers"><code class="language-typescript">onError = &quot;onError($event)&quot;;</code></pre></div><h2 id="example">Example</h2>
+<div><pre class="line-numbers"><code class="language-typescript">onError = &quot;onError($event)&quot;;</code></pre></div><h4>changeDetection()</h4>
+<p>An event that triggers on change detection in any of the components.</p>
+<table class="table table-bordered compodoc-table">
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(changeDetection)</td>
+<td><em>callback</em></td>
+<td><em>Optional</em></td>
+</tr>
+</tbody>
+</table>
+<p>Define callback in your component&#39;s class</p>
+<div><pre class="line-numbers"><code class="language-typescript">changeDetection(event: any) {
+  // do anything
+}</code></pre></div><p>Then add in component&#39;s template</p>
+<div><pre class="line-numbers"><code class="language-typescript">changeDetection = &quot;changeDetection($event)&quot;;</code></pre></div><h2>Example</h2>
 <p><img src="./screenshots/renderer.png" alt="alt text" class="img-responsive"></p>
 <p><img src="./screenshots/component.png" alt="alt text" class="img-responsive"></p>
 <div><pre class="line-numbers"><code class="language-typescript">&#64;Component({
@@ -297,6 +402,7 @@ export class dynamicrendererService {
      [(model)]=&quot;model&quot;
      [schema]=&quot;schema&quot;
      (onError)=&quot;onError($event)&quot;
+     changeDetection = &quot;changeDetection($event)&quot;;
    &gt;&lt;/n-dynamic-renderer&gt; 
   `,
   styleUrls: [&quot;./app.component.css&quot;],
@@ -318,90 +424,176 @@ export class AppComponent {
   };
 
   view =[
-  {
-    panel_name: &quot;Coverage Details&quot;,
-    styles: {
-      &quot;show-border&quot;: false,
-    },
-    class:&quot;panel_color&quot;,
-    expanded: true,
-    sections: [
-      {
-        section: {
-          layout: {
-              mobile: {
-                flex: &#39;100&#39;,
-              },
-              tablet: {
-                flex: &#39;100&#39;,
-              },
-              desktop: {
-                flex: &#39;100&#39;,
-              },
-              tv: {
-                flex: &#39;100&#39;,
-              },
-            },
-            styles:{
-              color:&#39;red&#39;
-            }
-          leafs: [
-            {
-              styles: {},
-              layout: {
-                  mobile: {
-                    flex: &#39;100&#39;,
-                  },
-                  tablet: {
-                    flex: &#39;100&#39;,
-                  },
-                  desktop: {
-                    flex: &#39;100&#39;,
-                  },
-                  tv: {
-                    flex: &#39;100&#39;,
-                  },
-              },
-              id: &quot;uuid1&quot;,
-              metadata: {
-                version: &quot;14.2.0&quot;,
-                library: &quot;manulife&quot;,
-                component_name: &quot;NMatButtonComponent&quot;,
-                options: {
-                  label: &quot;Save&quot;,
-                  output_events: {
-                    change_event: {
-                      functions: [
-                        {
-                          functionName: &quot;getMessage1&quot;,
-                          arguments: [1, 2, 3],
-                        },
-                        {
-                          functionName: &quot;getMessage2&quot;,
-                          arguments: [1, 2],
-                        },
-                        {
-                          functionName: &quot;getMessage3&quot;,
-                        },
-                      ],
-                    },
-                  },
-                },
-                expression: {
-                  $eq: [
-                    &quot;&#64;case.caseDetails.primaryLife.PersonalDetails.sex&quot;,
-                    &quot;Female&quot;,
-                  ],
-                },
-                updateOn: &quot;&quot;,
-              },
-            },
-          ],
+   {
+      &quot;icon&quot;: &quot;&quot;,
+      &quot;class&quot;: &quot;pb2 pr-p3&quot;,
+      &quot;layout&quot;: {
+        &quot;tv&quot;: {
+          &quot;flex&quot;: &quot;100&quot;
         },
+        &quot;mobile&quot;: {
+          &quot;flex&quot;: &quot;100&quot;
+        },
+        &quot;tablet&quot;: {
+          &quot;flex&quot;: &quot;100&quot;
+        },
+        &quot;desktop&quot;: {
+          &quot;flex&quot;: &quot;100&quot;
+        }
       },
-    ],
-  },
-];
+      &quot;styles&quot;: {},
+      &quot;expanded&quot;: false,
+      &quot;sections&quot;: [
+        {
+          &quot;section&quot;: {
+            &quot;class&quot;: &quot;section-card-nm&quot;,
+            &quot;leafs&quot;: [
+              {
+                &quot;layout&quot;: {
+                  &quot;tv&quot;: {
+                    &quot;flex&quot;: &quot;30&quot;
+                  },
+                  &quot;mobile&quot;: {
+                    &quot;flex&quot;: &quot;100&quot;
+                  },
+                  &quot;tablet&quot;: {
+                    &quot;flex&quot;: &quot;50&quot;
+                  },
+                  &quot;desktop&quot;: {
+                    &quot;flex&quot;: &quot;30&quot;
+                  }
+                },
+                &quot;styles&quot;: {},
+                &quot;metadata&quot;: {
+                  &quot;library&quot;: &quot;manulife-components&quot;,
+                  &quot;options&quot;: {
+                    &quot;label&quot;: &quot;ID Type&quot;,
+                    &quot;options&quot;: [],
+                    &quot;model_path&quot;: &quot;&#64;client_details.idType&quot;,
+                    &quot;validations&quot;: {
+                      &quot;type&quot;: &quot;string&quot;,
+                      &quot;required&quot;: true,
+                      &quot;dependencyValidations&quot;: [
+                        {
+                          &quot;validations&quot;: {
+                            &quot;required&quot;: true,
+                            &quot;idNoLengthCheckValidator&quot;: true
+                          },
+                          &quot;required_value&quot;: {
+                            &quot;$or&quot;: [
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;1&quot;
+                                ]
+                              },
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;7&quot;
+                                ]
+                              }
+                            ]
+                          },
+                          &quot;target_model_path&quot;: &quot;&#64;client_details.idNo&quot;,
+                          &quot;current_model_path&quot;: &quot;&#64;client_details.idType&quot;
+                        },
+                       
+                        {
+                          &quot;validations&quot;: {
+                            &quot;required&quot;: true,
+                            &quot;maxLength&quot;: 20,
+                            &quot;noSpecialCharactersValidator&quot;: true
+                          },
+                          &quot;required_value&quot;: {
+                            &quot;$or&quot;: [
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;2&quot;
+                                ]
+                              },
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;3&quot;
+                                ]
+                              }
+                            ]
+                          },
+                          &quot;target_model_path&quot;: &quot;&#64;client_details.idNo&quot;,
+                          &quot;current_model_path&quot;: &quot;&#64;client_details.idType&quot;
+                        },
+                        {
+                          &quot;validations&quot;: {
+                            &quot;required&quot;: true
+                          },
+                          &quot;required_value&quot;: {
+                            &quot;$or&quot;: [
+                              {
+                                &quot;$eq&quot;: [
+                                  &quot;&#64;client_details.idType&quot;,
+                                  &quot;1&quot;
+                                ]
+                              }
+                            ]
+                          },
+                          &quot;target_model_path&quot;: &quot;&#64;client_details.dateOfIssue&quot;,
+                          &quot;current_model_path&quot;: &quot;&#64;client_details.idType&quot;
+                        }
+                      ]
+                    },
+                    &quot;output_events&quot;: {
+                      &quot;functions&quot;: [
+                        {
+                          &quot;functionName&quot;: &quot;modifyValidations&quot;
+                        },
+                        {
+                          &quot;functionName&quot;: &quot;idType1validation&quot;
+                        }
+                      ]
+                    },
+                    &quot;initialize_functions&quot;: {
+                      &quot;functions&quot;: [
+                        {
+                          &quot;functionName&quot;: &quot;modifyValidations&quot;
+                        },
+                        {
+                          &quot;functionName&quot;: &quot;idType1validation&quot;
+                        }
+                      ]
+                    }
+                  },
+                  &quot;updateOn&quot;: &quot;blur&quot;,
+                  &quot;component_name&quot;: &quot;DropDownComponent&quot;
+                }
+              }
+            ],
+            &quot;layout&quot;: {
+              &quot;tv&quot;: {
+                &quot;flex&quot;: &quot;100&quot;
+              },
+              &quot;mobile&quot;: {
+                &quot;flex&quot;: &quot;100&quot;
+              },
+              &quot;tablet&quot;: {
+                &quot;flex&quot;: &quot;100&quot;
+              },
+              &quot;desktop&quot;: {
+                &quot;flex&quot;: &quot;100&quot;
+              }
+            },
+            &quot;styles&quot;: {
+              &quot;margin&quot;: &quot;1em 0em 1em 0em&quot;,
+              &quot;padding&quot;: &quot;1em&quot;
+            },
+            &quot;section_name&quot;: &quot;client_details&quot;
+          }
+        }
+      ],
+      &quot;panel_name&quot;: &quot;Policy Owner&quot;
+    }
+  ];
 }</code></pre></div>
 
 

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>n-dynamic-renderer documentation</title>
+        <title>manulife-ui-libraries documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,8 +13,8 @@
     </head>
     <body>
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">n-dynamic-renderer documentation</a>
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">manulife-ui-libraries documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -28,7 +28,7 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content miscellaneous-variables">
+               <div class="content miscellaneous-functions">
                    <div class="content-data">
 
 
@@ -49,11 +49,11 @@
 
 
 <ol class="breadcrumb">
-  <li>Miscellaneous</li>
-  <li>Variables</li>
+  <li class="breadcrumb-item">Miscellaneous</li>
+  <li class="breadcrumb-item">Functions</li>
 </ol>
 
-<section>
+<section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -61,10 +61,13 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#context" title="projects/n-dynamic-renderer/src/test.ts" ><b>context</b>&nbsp;&nbsp;&nbsp;(projects/.../test.ts)</a>
+                            <a href="#idNoBirthCerValidator" title="projects/n-dynamic-renderer/src/lib/custom-validations.service.ts" ><b>idNoBirthCerValidator</b>&nbsp;&nbsp;&nbsp;(projects/.../custom-validations.service.ts)</a>
                         </li>
                         <li>
-                            <a href="#require" title="projects/n-dynamic-renderer/src/test.ts" ><b>require</b>&nbsp;&nbsp;&nbsp;(projects/.../test.ts)</a>
+                            <a href="#idNoLengthCheckValidator" title="projects/n-dynamic-renderer/src/lib/custom-validations.service.ts" ><b>idNoLengthCheckValidator</b>&nbsp;&nbsp;&nbsp;(projects/.../custom-validations.service.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#noSpecialCharactersValidator" title="projects/n-dynamic-renderer/src/lib/custom-validations.service.ts" ><b>noSpecialCharactersValidator</b>&nbsp;&nbsp;&nbsp;(projects/.../custom-validations.service.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -73,51 +76,102 @@
     </table>
 </section>
 
-    <h3>projects/n-dynamic-renderer/src/test.ts</h3>
-    <section>
+    <h3>projects/n-dynamic-renderer/src/lib/custom-validations.service.ts</h3>
+    <section data-compodoc="block-methods">
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="context"></a>
+                    <a name="idNoBirthCerValidator"></a>
                     <span class="name">
-                        <span ><b>context</b></span>
-                        <a href="#context"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>idNoBirthCerValidator</b></span>
+                        <a href="#idNoBirthCerValidator"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Default value : </i><code>require.context(&#x27;./&#x27;, true, /\.spec\.ts$/)</code>
-                    </td>
-                </tr>
+            <tr>
+                <td class="col-md-4">
+<code>idNoBirthCerValidator()</code>
+                </td>
+            </tr>
 
 
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>ValidatorFn</code>
+
+                    </div>
+                </td>
+            </tr>
         </tbody>
     </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="require"></a>
+                    <a name="idNoLengthCheckValidator"></a>
                     <span class="name">
-                        <span ><b>require</b></span>
-                        <a href="#require"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>idNoLengthCheckValidator</b></span>
+                        <a href="#idNoLengthCheckValidator"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <i>Type : </i>    <code>literal type</code>
+            <tr>
+                <td class="col-md-4">
+<code>idNoLengthCheckValidator()</code>
+                </td>
+            </tr>
 
-                    </td>
-                </tr>
 
 
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>ValidatorFn</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="noSpecialCharactersValidator"></a>
+                    <span class="name">
+                        <span ><b>noSpecialCharactersValidator</b></span>
+                        <a href="#noSpecialCharactersValidator"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>noSpecialCharactersValidator()</code>
+                </td>
+            </tr>
+
+
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>ValidatorFn</code>
+
+                    </div>
+                </td>
+            </tr>
         </tbody>
     </table>
 </section>
-
 
 
                    </div><div class="search-results">
@@ -145,8 +199,8 @@
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
-            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-functions';
+            var COMPODOC_CURRENT_PAGE_URL = 'functions.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

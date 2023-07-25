@@ -15,7 +15,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         <nav>
             <ul class="list">
                 <li class="title">
-                    <a href="index.html" data-type="index-link">n-dynamic-renderer documentation</a>
+                    <a href="index.html" data-type="index-link">manulife-ui-libraries documentation</a>
                 </li>
 
                 <li class="divider"></li>
@@ -47,8 +47,8 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                 </li>
                     <li class="chapter modules">
                         <a data-type="chapter-link" href="modules.html">
-                            <div class="menu-toggler linked" data-toggle="collapse" ${ isNormalMode ?
-                                'data-target="#modules-links"' : 'data-target="#xs-modules-links"' }>
+                            <div class="menu-toggler linked" data-bs-toggle="collapse" ${ isNormalMode ?
+                                'data-bs-target="#modules-links"' : 'data-bs-target="#xs-modules-links"' }>
                                 <span class="icon ion-ios-archive"></span>
                                 <span class="link-name">Modules</span>
                                 <span class="icon ion-ios-arrow-down"></span>
@@ -58,14 +58,14 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <li class="link">
                                 <a href="modules/NDynamicRendererModule.html" data-type="entity-link" >NDynamicRendererModule</a>
                                     <li class="chapter inner">
-                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-NDynamicRendererModule-5cc87532e76dd020fecac729921945cebc5a55bfc5593c6de5f13bfbe2ba458c6b936174241225b59c7806d09db89a33c12f3b4a71a4349ddbaf0eb1af582d7c"' : 'data-target="#xs-components-links-module-NDynamicRendererModule-5cc87532e76dd020fecac729921945cebc5a55bfc5593c6de5f13bfbe2ba458c6b936174241225b59c7806d09db89a33c12f3b4a71a4349ddbaf0eb1af582d7c"' }>
+                                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ?
+                                            'data-bs-target="#components-links-module-NDynamicRendererModule-8a7b9a1d839304407c7e621681e3339b6b7ae1fcbf84e59adfba5692b5b0d8529ceb961605cd412df0485b08aa1077498cf6ad9f58ce6af9747691d0942ae0e7"' : 'data-bs-target="#xs-components-links-module-NDynamicRendererModule-8a7b9a1d839304407c7e621681e3339b6b7ae1fcbf84e59adfba5692b5b0d8529ceb961605cd412df0485b08aa1077498cf6ad9f58ce6af9747691d0942ae0e7"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-NDynamicRendererModule-5cc87532e76dd020fecac729921945cebc5a55bfc5593c6de5f13bfbe2ba458c6b936174241225b59c7806d09db89a33c12f3b4a71a4349ddbaf0eb1af582d7c"' :
-                                            'id="xs-components-links-module-NDynamicRendererModule-5cc87532e76dd020fecac729921945cebc5a55bfc5593c6de5f13bfbe2ba458c6b936174241225b59c7806d09db89a33c12f3b4a71a4349ddbaf0eb1af582d7c"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-NDynamicRendererModule-8a7b9a1d839304407c7e621681e3339b6b7ae1fcbf84e59adfba5692b5b0d8529ceb961605cd412df0485b08aa1077498cf6ad9f58ce6af9747691d0942ae0e7"' :
+                                            'id="xs-components-links-module-NDynamicRendererModule-8a7b9a1d839304407c7e621681e3339b6b7ae1fcbf84e59adfba5692b5b0d8529ceb961605cd412df0485b08aa1077498cf6ad9f58ce6af9747691d0942ae0e7"' }>
                                             <li class="link">
                                                 <a href="components/NDynamicRendererComponent.html" data-type="entity-link" data-context="sub-entity" data-context-id="modules" >NDynamicRendererComponent</a>
                                             </li>
@@ -75,8 +75,8 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                 </ul>
                 </li>
                         <li class="chapter">
-                            <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#injectables-links"' :
-                                'data-target="#xs-injectables-links"' }>
+                            <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#injectables-links"' :
+                                'data-bs-target="#xs-injectables-links"' }>
                                 <span class="icon ion-md-arrow-round-down"></span>
                                 <span>Injectables</span>
                                 <span class="icon ion-ios-arrow-down"></span>
@@ -88,18 +88,18 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </ul>
                         </li>
                     <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#interfaces-links"' :
-                            'data-target="#xs-interfaces-links"' }>
+                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#interfaces-links"' :
+                            'data-bs-target="#xs-interfaces-links"' }>
                             <span class="icon ion-md-information-circle-outline"></span>
                             <span>Interfaces</span>
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? ' id="interfaces-links"' : 'id="xs-interfaces-links"' }>
                             <li class="link">
-                                <a href="interfaces/ChangeEvent.html" data-type="entity-link" >ChangeEvent</a>
+                                <a href="interfaces/Config.html" data-type="entity-link" >Config</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/Config.html" data-type="entity-link" >Config</a>
+                                <a href="interfaces/DependencyValidations.html" data-type="entity-link" >DependencyValidations</a>
                             </li>
                             <li class="link">
                                 <a href="interfaces/Flex.html" data-type="entity-link" >Flex</a>
@@ -123,9 +123,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="interfaces/Options.html" data-type="entity-link" >Options</a>
                             </li>
                             <li class="link">
-                                <a href="interfaces/OutputEvents.html" data-type="entity-link" >OutputEvents</a>
-                            </li>
-                            <li class="link">
                                 <a href="interfaces/Panels.html" data-type="entity-link" >Panels</a>
                             </li>
                             <li class="link">
@@ -134,21 +131,24 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <li class="link">
                                 <a href="interfaces/Sections.html" data-type="entity-link" >Sections</a>
                             </li>
+                            <li class="link">
+                                <a href="interfaces/Validations.html" data-type="entity-link" >Validations</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="chapter">
-                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#miscellaneous-links"'
-                            : 'data-target="#xs-miscellaneous-links"' }>
+                        <div class="simple menu-toggler" data-bs-toggle="collapse" ${ isNormalMode ? 'data-bs-target="#miscellaneous-links"'
+                            : 'data-bs-target="#xs-miscellaneous-links"' }>
                             <span class="icon ion-ios-cube"></span>
                             <span>Miscellaneous</span>
                             <span class="icon ion-ios-arrow-down"></span>
                         </div>
                         <ul class="links collapse " ${ isNormalMode ? 'id="miscellaneous-links"' : 'id="xs-miscellaneous-links"' }>
                             <li class="link">
-                                <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
+                                <a href="miscellaneous/functions.html" data-type="entity-link">Functions</a>
                             </li>
                             <li class="link">
-                                <a href="miscellaneous/variables.html" data-type="entity-link">Variables</a>
+                                <a href="miscellaneous/typealiases.html" data-type="entity-link">Type aliases</a>
                             </li>
                         </ul>
                     </li>
@@ -157,7 +157,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                     </li>
                     <li class="divider"></li>
                     <li class="copyright">
-                        Documentation generated using <a href="https://compodoc.app/" target="_blank">
+                        Documentation generated using <a href="https://compodoc.app/" target="_blank" rel="noopener noreferrer">
                             <img data-src="images/compodoc-vectorise.png" class="img-responsive" data-type="compodoc-logo">
                         </a>
                     </li>

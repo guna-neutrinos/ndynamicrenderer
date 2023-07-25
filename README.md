@@ -122,6 +122,8 @@ Add the above code in the legacy service created
 - [[view]](#view)
 - [[schema]](#schema)
 - [(onError)](#onerror)
+- [(changeDetection)](#changeDetection)
+
 
 #### [model]
 
@@ -148,90 +150,176 @@ Define __view__ in your component's class
 
 ```typescript
 View = [
-  {
-    panel_name: "Coverage Details",
-    styles: {
-      "show-border": false,
-    },
-    class:"panel_color",
-    expanded: true,
-    sections: [
-      {
-        section: {
-          layout: {
-              mobile: {
-                flex: '100',
-              },
-              tablet: {
-                flex: '100',
-              },
-              desktop: {
-                flex: '100',
-              },
-              tv: {
-                flex: '100',
-              },
-            },
-            styles:{
-              color:'red'
-            }
-          leafs: [
-            {
-              styles: {},
-              layout: {
-                  mobile: {
-                    flex: '100',
-                  },
-                  tablet: {
-                    flex: '100',
-                  },
-                  desktop: {
-                    flex: '100',
-                  },
-                  tv: {
-                    flex: '100',
-                  },
-              },
-              id: "uuid1",
-              metadata: {
-                version: "14.2.0",
-                library: "manulife",
-                component_name: "NMatButtonComponent",
-                options: {
-                  label: "Save",
-                  output_events: {
-                    change_event: {
-                      functions: [
-                        {
-                          functionName: "getMessage1",
-                          arguments: [1, 2, 3],
-                        },
-                        {
-                          functionName: "getMessage2",
-                          arguments: [1, 2],
-                        },
-                        {
-                          functionName: "getMessage3",
-                        },
-                      ],
-                    },
-                  },
-                },
-                expression: {
-                  $eq: [
-                    "@case.caseDetails.primaryLife.PersonalDetails.sex",
-                    "Female",
-                  ],
-                },
-                updateOn: "",
-              },
-            },
-          ],
+   {
+      "icon": "",
+      "class": "pb2 pr-p3",
+      "layout": {
+        "tv": {
+          "flex": "100"
         },
+        "mobile": {
+          "flex": "100"
+        },
+        "tablet": {
+          "flex": "100"
+        },
+        "desktop": {
+          "flex": "100"
+        }
       },
-    ],
-  },
-];
+      "styles": {},
+      "expanded": false,
+      "sections": [
+        {
+          "section": {
+            "class": "section-card-nm",
+            "leafs": [
+              {
+                "layout": {
+                  "tv": {
+                    "flex": "30"
+                  },
+                  "mobile": {
+                    "flex": "100"
+                  },
+                  "tablet": {
+                    "flex": "50"
+                  },
+                  "desktop": {
+                    "flex": "30"
+                  }
+                },
+                "styles": {},
+                "metadata": {
+                  "library": "manulife-components",
+                  "options": {
+                    "label": "ID Type",
+                    "options": [],
+                    "model_path": "@client_details.idType",
+                    "validations": {
+                      "type": "string",
+                      "required": true,
+                      "dependencyValidations": [
+                        {
+                          "validations": {
+                            "required": true,
+                            "idNoLengthCheckValidator": true
+                          },
+                          "required_value": {
+                            "$or": [
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "1"
+                                ]
+                              },
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "7"
+                                ]
+                              }
+                            ]
+                          },
+                          "target_model_path": "@client_details.idNo",
+                          "current_model_path": "@client_details.idType"
+                        },
+                       
+                        {
+                          "validations": {
+                            "required": true,
+                            "maxLength": 20,
+                            "noSpecialCharactersValidator": true
+                          },
+                          "required_value": {
+                            "$or": [
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "2"
+                                ]
+                              },
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "3"
+                                ]
+                              }
+                            ]
+                          },
+                          "target_model_path": "@client_details.idNo",
+                          "current_model_path": "@client_details.idType"
+                        },
+                        {
+                          "validations": {
+                            "required": true
+                          },
+                          "required_value": {
+                            "$or": [
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "1"
+                                ]
+                              }
+                            ]
+                          },
+                          "target_model_path": "@client_details.dateOfIssue",
+                          "current_model_path": "@client_details.idType"
+                        }
+                      ]
+                    },
+                    "output_events": {
+                      "functions": [
+                        {
+                          "functionName": "modifyValidations"
+                        },
+                        {
+                          "functionName": "idType1validation"
+                        }
+                      ]
+                    },
+                    "initialize_functions": {
+                      "functions": [
+                        {
+                          "functionName": "modifyValidations"
+                        },
+                        {
+                          "functionName": "idType1validation"
+                        }
+                      ]
+                    }
+                  },
+                  "updateOn": "blur",
+                  "component_name": "DropDownComponent"
+                }
+              }
+            ],
+            "layout": {
+              "tv": {
+                "flex": "100"
+              },
+              "mobile": {
+                "flex": "100"
+              },
+              "tablet": {
+                "flex": "100"
+              },
+              "desktop": {
+                "flex": "100"
+              }
+            },
+            "styles": {
+              "margin": "1em 0em 1em 0em",
+              "padding": "1em"
+            },
+            "section_name": "client_details"
+          }
+        }
+      ],
+      "panel_name": "Policy Owner"
+    }
+]
 
 ```
 
@@ -284,6 +372,30 @@ Then add in component's template
 onError = "onError($event)";
 ```
 
+
+#### changeDetection()
+
+An event that triggers on change detection in any of the components.
+
+| Property  | Type       | Required   |
+| --------- | ---------- | ---------- |
+| (changeDetection) | _callback_ | _Optional_ |
+
+Define callback in your component's class
+
+```typescript
+changeDetection(event: any) {
+  // do anything
+}
+```
+
+Then add in component's template
+
+```typescript
+changeDetection = "changeDetection($event)";
+```
+
+
 ## Example
 
 ![alt text](./screenshots/renderer.png)
@@ -301,6 +413,7 @@ onError = "onError($event)";
      [(model)]="model"
      [schema]="schema"
      (onError)="onError($event)"
+     changeDetection = "changeDetection($event)";
    ></n-dynamic-renderer> 
   `,
   styleUrls: ["./app.component.css"],
@@ -322,89 +435,175 @@ export class AppComponent {
   };
 
   view =[
-  {
-    panel_name: "Coverage Details",
-    styles: {
-      "show-border": false,
-    },
-    class:"panel_color",
-    expanded: true,
-    sections: [
-      {
-        section: {
-          layout: {
-              mobile: {
-                flex: '100',
-              },
-              tablet: {
-                flex: '100',
-              },
-              desktop: {
-                flex: '100',
-              },
-              tv: {
-                flex: '100',
-              },
-            },
-            styles:{
-              color:'red'
-            }
-          leafs: [
-            {
-              styles: {},
-              layout: {
-                  mobile: {
-                    flex: '100',
-                  },
-                  tablet: {
-                    flex: '100',
-                  },
-                  desktop: {
-                    flex: '100',
-                  },
-                  tv: {
-                    flex: '100',
-                  },
-              },
-              id: "uuid1",
-              metadata: {
-                version: "14.2.0",
-                library: "manulife",
-                component_name: "NMatButtonComponent",
-                options: {
-                  label: "Save",
-                  output_events: {
-                    change_event: {
-                      functions: [
-                        {
-                          functionName: "getMessage1",
-                          arguments: [1, 2, 3],
-                        },
-                        {
-                          functionName: "getMessage2",
-                          arguments: [1, 2],
-                        },
-                        {
-                          functionName: "getMessage3",
-                        },
-                      ],
-                    },
-                  },
-                },
-                expression: {
-                  $eq: [
-                    "@case.caseDetails.primaryLife.PersonalDetails.sex",
-                    "Female",
-                  ],
-                },
-                updateOn: "",
-              },
-            },
-          ],
+   {
+      "icon": "",
+      "class": "pb2 pr-p3",
+      "layout": {
+        "tv": {
+          "flex": "100"
         },
+        "mobile": {
+          "flex": "100"
+        },
+        "tablet": {
+          "flex": "100"
+        },
+        "desktop": {
+          "flex": "100"
+        }
       },
-    ],
-  },
-];
+      "styles": {},
+      "expanded": false,
+      "sections": [
+        {
+          "section": {
+            "class": "section-card-nm",
+            "leafs": [
+              {
+                "layout": {
+                  "tv": {
+                    "flex": "30"
+                  },
+                  "mobile": {
+                    "flex": "100"
+                  },
+                  "tablet": {
+                    "flex": "50"
+                  },
+                  "desktop": {
+                    "flex": "30"
+                  }
+                },
+                "styles": {},
+                "metadata": {
+                  "library": "manulife-components",
+                  "options": {
+                    "label": "ID Type",
+                    "options": [],
+                    "model_path": "@client_details.idType",
+                    "validations": {
+                      "type": "string",
+                      "required": true,
+                      "dependencyValidations": [
+                        {
+                          "validations": {
+                            "required": true,
+                            "idNoLengthCheckValidator": true
+                          },
+                          "required_value": {
+                            "$or": [
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "1"
+                                ]
+                              },
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "7"
+                                ]
+                              }
+                            ]
+                          },
+                          "target_model_path": "@client_details.idNo",
+                          "current_model_path": "@client_details.idType"
+                        },
+                       
+                        {
+                          "validations": {
+                            "required": true,
+                            "maxLength": 20,
+                            "noSpecialCharactersValidator": true
+                          },
+                          "required_value": {
+                            "$or": [
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "2"
+                                ]
+                              },
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "3"
+                                ]
+                              }
+                            ]
+                          },
+                          "target_model_path": "@client_details.idNo",
+                          "current_model_path": "@client_details.idType"
+                        },
+                        {
+                          "validations": {
+                            "required": true
+                          },
+                          "required_value": {
+                            "$or": [
+                              {
+                                "$eq": [
+                                  "@client_details.idType",
+                                  "1"
+                                ]
+                              }
+                            ]
+                          },
+                          "target_model_path": "@client_details.dateOfIssue",
+                          "current_model_path": "@client_details.idType"
+                        }
+                      ]
+                    },
+                    "output_events": {
+                      "functions": [
+                        {
+                          "functionName": "modifyValidations"
+                        },
+                        {
+                          "functionName": "idType1validation"
+                        }
+                      ]
+                    },
+                    "initialize_functions": {
+                      "functions": [
+                        {
+                          "functionName": "modifyValidations"
+                        },
+                        {
+                          "functionName": "idType1validation"
+                        }
+                      ]
+                    }
+                  },
+                  "updateOn": "blur",
+                  "component_name": "DropDownComponent"
+                }
+              }
+            ],
+            "layout": {
+              "tv": {
+                "flex": "100"
+              },
+              "mobile": {
+                "flex": "100"
+              },
+              "tablet": {
+                "flex": "100"
+              },
+              "desktop": {
+                "flex": "100"
+              }
+            },
+            "styles": {
+              "margin": "1em 0em 1em 0em",
+              "padding": "1em"
+            },
+            "section_name": "client_details"
+          }
+        }
+      ],
+      "panel_name": "Policy Owner"
+    }
+  ];
 }
 ```

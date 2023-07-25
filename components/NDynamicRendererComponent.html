@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>n-dynamic-renderer documentation</title>
+        <title>manulife-ui-libraries documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,8 +13,8 @@
     </head>
     <body>
 
-        <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">n-dynamic-renderer documentation</a>
+        <div class="navbar navbar-default navbar-fixed-top d-block d-sm-none">
+            <a href="../" class="navbar-brand">manulife-ui-libraries documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -35,20 +35,37 @@
 
 
 <ol class="breadcrumb">
-  <li>Components</li>
-  <li
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
   >
   NDynamicRendererComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#styleData" class="nav-link"
+                role="tab" id="styleData-tab" data-bs-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
         </li>
 </ul>
 
 <div class="tab-content">
-    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
@@ -62,14 +79,15 @@
         <h3>Implements</h3>
     </p>
     <p class="comment">
-                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+                <code>OnInit</code>
     </p>
 
 
-<section>
+<section data-compodoc="block-metadata">
     <h3>Metadata</h3>
     <table class="table table-sm table-hover metadata">
         <tbody>
+
 
 
 
@@ -85,6 +103,8 @@
                 <td class="col-md-3">selector</td>
                 <td class="col-md-9"><code>n-dynamic-renderer</code></td>
             </tr>
+
+
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
@@ -109,7 +129,7 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-index">
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
@@ -125,6 +145,9 @@
                                 <a href="#ajv" >ajv</a>
                             </li>
                             <li>
+                                <a href="#compRef" >compRef</a>
+                            </li>
+                            <li>
                                 <a href="#flexVal" >flexVal</a>
                             </li>
                             <li>
@@ -136,6 +159,9 @@
                             </li>
                             <li>
                                 <a href="#outputs" >outputs</a>
+                            </li>
+                            <li>
+                                <a href="#rendererId" >rendererId</a>
                             </li>
                             <li>
                                 <a href="#typeMapper" >typeMapper</a>
@@ -156,7 +182,19 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#changeExpansionOnPanel" >changeExpansionOnPanel</a>
+                            </li>
+                            <li>
+                                <a href="#collectErrors" >collectErrors</a>
+                            </li>
+                            <li>
+                                <a href="#componentCreated" >componentCreated</a>
+                            </li>
+                            <li>
                                 <a href="#componentValidation" >componentValidation</a>
+                            </li>
+                            <li>
+                                <a href="#detectErrorsOnFormControls" >detectErrorsOnFormControls</a>
                             </li>
                             <li>
                                 <a href="#errorEmit" >errorEmit</a>
@@ -165,13 +203,25 @@
                                 <a href="#formChangeDetection" >formChangeDetection</a>
                             </li>
                             <li>
+                                <a href="#getClass" >getClass</a>
+                            </li>
+                            <li>
                                 <a href="#getComponent" >getComponent</a>
+                            </li>
+                            <li>
+                                <a href="#getExpansionFlag" >getExpansionFlag</a>
                             </li>
                             <li>
                                 <a href="#getInputs" >getInputs</a>
                             </li>
                             <li>
                                 <a href="#initView" >initView</a>
+                            </li>
+                            <li>
+                                <a href="#isFormGroup" >isFormGroup</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
                             </li>
                             <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
@@ -186,6 +236,15 @@
                             <li>
                                 <a href="#prepareFormControl" >prepareFormControl</a>
                             </li>
+                            <li>
+                                <a href="#readModel" >readModel</a>
+                            </li>
+                            <li>
+                                <a href="#touchedControls" >touchedControls</a>
+                            </li>
+                            <li>
+                                <a href="#validateObjectWithSchema" >validateObjectWithSchema</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -198,6 +257,9 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#appMetadata" >appMetadata</a>
+                            </li>
                             <li>
                                 <a href="#model" >model</a>
                             </li>
@@ -220,6 +282,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#changeDetection" >changeDetection</a>
+                            </li>
+                            <li>
                                 <a href="#modelChange" >modelChange</a>
                             </li>
                             <li>
@@ -235,15 +300,20 @@
     </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-constructor">
     <h3 id="constructor">Constructor</h3>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(nDynamicRendererService: <a href="../injectables/NDynamicRendererService.html" target="_self">NDynamicRendererService</a>, fb: <a href="https://angular.io/api/forms/FormBuilder" target="_blank">FormBuilder</a>)</code>
+<code>constructor(nDynamicRendererService: <a href="../injectables/NDynamicRendererService.html" target="_self">NDynamicRendererService</a>, fb: FormBuilder)</code>
                     </td>
                 </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:34</a></div>
+                            </td>
+                        </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -274,7 +344,7 @@
                                                         <td>fb</td>
                                                   
                                                         <td>
-                                                                        <code><a href="https://angular.io/api/forms/FormBuilder" target="_blank" >FormBuilder</a></code>
+                                                                    <code>FormBuilder</code>
                                                         </td>
                                                   
                                                     <td>
@@ -291,8 +361,29 @@
         </table>
 </section>
 
-    <section>
+    <section data-compodoc="block-inputs">
     <h3 id="inputs">Inputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="appMetadata"></a>
+                        <b>appMetadata</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:45</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -307,6 +398,11 @@
 
                     </td>
                 </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:43</a></div>
+                            </td>
+                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -323,6 +419,11 @@
 
                     </td>
                 </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:44</a></div>
+                            </td>
+                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -339,11 +440,37 @@
 
                     </td>
                 </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:42</a></div>
+                            </td>
+                        </tr>
             </tbody>
         </table>
 </section>
-    <section>
+    <section data-compodoc="block-outputs">
     <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="changeDetection"></a>
+                        <b>changeDetection</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>EventEmitter</code>
+
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="48" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:48</a></div>
+                            </td>
+                        </tr>
+            </tbody>
+        </table>
         <table class="table table-sm table-bordered">
             <tbody>
                 <tr>
@@ -354,10 +481,15 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+                        <i>Type : </i>    <code>EventEmitter</code>
 
                     </td>
                 </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:46</a></div>
+                            </td>
+                        </tr>
             </tbody>
         </table>
         <table class="table table-sm table-bordered">
@@ -370,20 +502,239 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://angular.io/api/core/EventEmitter" target="_blank" >EventEmitter</a></code>
+                        <i>Type : </i>    <code>EventEmitter</code>
 
                     </td>
                 </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Defined in <a href="" data-line="47" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:47</a></div>
+                            </td>
+                        </tr>
             </tbody>
         </table>
 </section>
 
 
-    <section>
+    <section data-compodoc="block-methods">
     
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="changeExpansionOnPanel"></a>
+                    <span class="name">
+                        <span ><b>changeExpansionOnPanel</b></span>
+                        <a href="#changeExpansionOnPanel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>changeExpansionOnPanel(expansions)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="99"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:99</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>expansions</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="collectErrors"></a>
+                    <span class="name">
+                        <span ><b>collectErrors</b></span>
+                        <a href="#collectErrors"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>collectErrors(control: AbstractControl)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="387"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:387</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>control</td>
+                                    <td>
+                                            <code>AbstractControl</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>any | null</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="componentCreated"></a>
+                    <span class="name">
+                        <span ><b>componentCreated</b></span>
+                        <a href="#componentCreated"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>componentCreated(compRef: ComponentRef<any>, metadata)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="65"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:65</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>compRef</td>
+                                    <td>
+                                            <code>ComponentRef&lt;any&gt;</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>metadata</td>
+                                    <td>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -402,6 +753,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="409"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:409</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -456,6 +813,43 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="detectErrorsOnFormControls"></a>
+                    <span class="name">
+                        <span ><b>detectErrorsOnFormControls</b></span>
+                        <a href="#detectErrorsOnFormControls"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>detectErrorsOnFormControls()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="289"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:289</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="errorEmit"></a>
                     <span class="name">
                         <span ><b>errorEmit</b></span>
@@ -470,6 +864,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="520"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:520</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -535,6 +935,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:255</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -544,6 +950,105 @@
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getClass"></a>
+                    <span class="name">
+                        <span ><b>getClass</b></span>
+                        <a href="#getClass"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getClass(stylesClass: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, category: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="482"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:482</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Get the View class and applying the default classes</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>stylesClass</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Classes from the View.</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>category</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Category of the styles.</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>string | string[]  | { [klass: string]: any; }</li>
+</ul>
 
                     </div>
                 </td>
@@ -568,6 +1073,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="206"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:206</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -629,6 +1140,80 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getExpansionFlag"></a>
+                    <span class="name">
+                        <span ><b>getExpansionFlag</b></span>
+                        <a href="#getExpansionFlag"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getExpansionFlag(panel, expansions)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="117"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:117</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>panel</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                                <tr>
+                                    <td>expansions</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="getInputs"></a>
                     <span class="name">
                         <span ><b>getInputs</b></span>
@@ -643,6 +1228,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="219"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:219</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -718,6 +1309,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="130"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:130</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -776,6 +1373,140 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="isFormGroup"></a>
+                    <span class="name">
+                        <span ><b>isFormGroup</b></span>
+                        <a href="#isFormGroup"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>isFormGroup(control: AbstractControl)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="383"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:383</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>control</td>
+                                    <td>
+                                            <code>AbstractControl</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>FormGroup</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:86</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>changes</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="ngOnInit"></a>
                     <span class="name">
                         <span ><b>ngOnInit</b></span>
@@ -790,6 +1521,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:72</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -818,11 +1555,17 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>outputMethods(change_event: <a href="../interfaces/ChangeEvent.html" target="_self">ChangeEvent</a>)</code>
+                    <code>outputMethods(change_event: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
                 </td>
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="449"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:449</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -845,7 +1588,7 @@
                                 <tr>
                                     <td>change_event</td>
                                     <td>
-                                                <code><a href="../interfaces/ChangeEvent.html" target="_self" >ChangeEvent</a></code>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
                                     </td>
 
                                     <td>
@@ -888,6 +1631,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="427"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:427</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -921,6 +1670,12 @@
             </tr>
 
 
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="153"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:153</a></div>
+                </td>
+            </tr>
 
 
             <tr>
@@ -1011,8 +1766,259 @@
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="readModel"></a>
+                    <span class="name">
+                        <span ><b>readModel</b></span>
+                        <a href="#readModel"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>readModel(model_path: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="495"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:495</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>model_path</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="touchedControls"></a>
+                    <span class="name">
+                        <span ><b>touchedControls</b></span>
+                        <a href="#touchedControls"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>touchedControls(modelForm: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="277"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:277</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>modelForm</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="validateObjectWithSchema"></a>
+                    <span class="name">
+                        <span ><b>validateObjectWithSchema</b></span>
+                        <a href="#validateObjectWithSchema"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>validateObjectWithSchema(obj: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, schema: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>, appMetadata?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="509"
+                            class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:509</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Validates the object with the schema.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>obj</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>The object to be validated.</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>schema</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <ul>
+<li>Schema.</li>
+</ul>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>appMetadata</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        Yes
+                                    </td>
+
+
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <ul>
+<li>Returns a boolean based on the validation.</li>
+</ul>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
-    <section>
+    <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Properties
@@ -1034,6 +2040,42 @@
 
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:34</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="compRef"></a>
+                    <span class="name">
+                        <span ><b>compRef</b></span>
+                        <a href="#compRef"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="55" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:55</a></div>
+                        </td>
+                    </tr>
 
 
         </tbody>
@@ -1060,6 +2102,11 @@
                         <i>Default value : </i><code>100</code>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="52" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:52</a></div>
+                        </td>
+                    </tr>
 
 
         </tbody>
@@ -1086,6 +2133,11 @@
                         <i>Default value : </i><code>{}</code>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:49</a></div>
+                        </td>
+                    </tr>
 
 
         </tbody>
@@ -1104,15 +2156,20 @@
             </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </td>
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Default value : </i><code>this.fb.group({})</code>
+                        <i>Default value : </i><code>{}</code>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:53</a></div>
+                        </td>
+                    </tr>
 
 
         </tbody>
@@ -1140,9 +2197,48 @@
     change_event: async (result: any) &#x3D;&gt; {
       await this.outputMethods(result);
     },
+    errors: async (error: any) &#x3D;&gt; {
+      this.errorEmit(error);
+    },
   }</code>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:56</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="rendererId"></a>
+                    <span class="name">
+                        <span ><b>rendererId</b></span>
+                        <a href="#rendererId"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&#x27;&#x27;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="50" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:50</a></div>
+                        </td>
+                    </tr>
 
 
         </tbody>
@@ -1169,6 +2265,11 @@
                         <i>Default value : </i><code>{}</code>
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:54</a></div>
+                        </td>
+                    </tr>
 
 
         </tbody>
@@ -1190,6 +2291,11 @@
 
                     </td>
                 </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">projects/n-dynamic-renderer/src/lib/n-dynamic-renderer/n-dynamic-renderer.component.ts:51</a></div>
+                        </td>
+                    </tr>
 
 
         </tbody>
@@ -1199,9 +2305,753 @@
 </div>
 
 
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Component,
+  ComponentRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  SimpleChanges,
+} from &#x27;@angular/core&#x27;;
+import {
+  AbstractControl,
+  FormBuilder,
+  FormControl,
+  FormGroup,
+} from &#x27;@angular/forms&#x27;;
+import { NDynamicRendererService } from &#x27;../n-dynamic-renderer.service&#x27;;
+import Ajv from &#x27;ajv&#x27;;
+import addFormats from &#x27;ajv-formats&#x27;;
+import {
+  ChangeEvent,
+  Leaf,
+  Metadata,
+  Panel,
+  Section,
+  Sections,
+} from &#x27;../interfaces/interface&#x27;;
 
+@Component({
+  selector: &#x27;n-dynamic-renderer&#x27;,
+  templateUrl: &#x27;./n-dynamic-renderer.component.html&#x27;,
+  styleUrls: [&#x27;./n-dynamic-renderer.component.css&#x27;],
+})
+export class NDynamicRendererComponent implements OnInit {
+  ajv: any;
+  constructor(
+    private nDynamicRendererService: NDynamicRendererService,
+    private fb: FormBuilder
+  ) {
+    this.ajv &#x3D; new Ajv();
+    addFormats(this.ajv);
+  }
+  @Input() view: any;
+  @Input() model: any;
+  @Input() schema: any;
+  @Input() appMetadata: any;
+  @Output() modelChange &#x3D; new EventEmitter();
+  @Output() onError &#x3D; new EventEmitter();
+  @Output() changeDetection &#x3D; new EventEmitter();
+  formControlMapper: any &#x3D; {};
+  rendererId: any &#x3D; &#x27;&#x27;;
+  viewPanels: any;
+  flexVal: number &#x3D; 100;
+  public modelForm: any &#x3D; {};
+  typeMapper: any &#x3D; {};
+  compRef &#x3D; {};
+  outputs &#x3D; {
+    change_event: async (result: any) &#x3D;&gt; {
+      await this.outputMethods(result);
+    },
+    errors: async (error: any) &#x3D;&gt; {
+      this.errorEmit(error);
+    },
+  };
 
+  componentCreated(compRef: ComponentRef&lt;any&gt;, metadata) {
 
+    this.nDynamicRendererService.ComponentReference[
+      metadata.options.model_path
+    ] &#x3D; compRef;
+  }
+
+  ngOnInit(): void {
+    this.nDynamicRendererService.viewStore[this.rendererId] &#x3D; this.view
+    this.viewPanels &#x3D; this.nDynamicRendererService.viewStore[this.rendererId]|| [];
+    this.model &#x3D; this.model || {};
+    this.schema &#x3D; this.schema || {};
+    this.rendererId &#x3D; Math.random().toString(16).slice(2);
+    this.modelForm &#x3D; this.nDynamicRendererService.modelForm;
+    this.formControlMapper &#x3D; this.nDynamicRendererService.formControlMapper;
+    this.modelForm[this.rendererId] &#x3D; this.fb.group({});
+    this.formControlMapper[this.rendererId] &#x3D; {};
+    this.initView(this.viewPanels);
+    this.formChangeDetection();
+  }
+
+  ngOnChanges(changes) {
+    if (changes?.appMetadata?.currentValue?.cancel) {
+      this.modelForm &#x3D; {};
+      this.formControlMapper &#x3D; {};
+      this.modelForm[this.rendererId] &#x3D; this.fb.group({});
+      this.formControlMapper[this.rendererId] &#x3D; {};
+      this.initView(this.viewPanels);
+    }
+    if (changes?.appMetadata?.currentValue?.expansions) {
+      this.changeExpansionOnPanel(this.appMetadata.expansions);
+    }
+  }
+
+  changeExpansionOnPanel(expansions) {
+      this.view?.forEach((panel) &#x3D;&gt; {
+        if (panel &amp;&amp; Object.keys(panel).length &gt; 0) {
+          panel[&#x27;expanded&#x27;] &#x3D; this.getExpansionFlag(panel, expansions);
+        }
+        panel?.sections.map((section) &#x3D;&gt; {
+          if (
+            section &amp;&amp;
+            Object.keys(section).length &gt; 0 &amp;&amp;
+            section.section &amp;&amp;
+            Object.keys(section.section).length &gt; 0
+          ) {
+            section.section[&#x27;expanded&#x27;] &#x3D; expansions[panel.panel_name];
+          }
+        });
+      });
+  
+  }
+  getExpansionFlag(panel, expansions) {
+    if (panel &amp;&amp; expansions) {
+      if (expansions[panel.panel_name]) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  /**
+   * Iterates through the view to create formControls
+   * @param viewPanels - The view Object
+   */
+  initView(viewPanels: Panel) {
+    try {
+      for (let i &#x3D; 0; i &lt; viewPanels?.length; i++) {
+        const panel &#x3D; viewPanels[i];
+        for (let j &#x3D; 0; j &lt; panel?.sections.length; j++) {
+          const section &#x3D; panel?.sections[j]?.section;
+          for (let k &#x3D; 0; k &lt; section?.leafs?.length; k++) {
+            let model_path &#x3D; section.leafs[k]?.metadata?.options?.model_path;
+            if (model_path) this.prepareFormControl(model_path, section, k);
+          }
+        }
+      }
+    } catch (error) {
+      this.errorEmit(error);
+    }
+  }
+  /**
+   * Prepares FormControls
+   * @param model_path - The Modelpath of the Model
+   * @param section - The section key in the model
+   * @param index - Index of the leaf in the section.
+   */
+
+  prepareFormControl(model_path: string, section: Section, index: number) {
+    const id &#x3D; Math.floor(Math.random() * 10000000);
+    section.leafs[index].id &#x3D; id;
+    model_path &#x3D; this.nDynamicRendererService.trimModelValue(model_path);
+    const obj: any &#x3D; {};
+    obj[model_path] &#x3D; this.nDynamicRendererService.readModel(
+      model_path,
+      this.model
+    );
+    const unflatObj &#x3D; this.nDynamicRendererService.createUnflattenObject(obj);
+    const valid &#x3D; this.validateObjectWithSchema(
+      unflatObj,
+      this.schema,
+      this.appMetadata
+    );
+
+    // if ( !valid || valid) {   //Commented for validation
+    const value &#x3D; this.nDynamicRendererService.readModel(
+      model_path,
+      this.model
+    );
+
+    if (this.modelForm[this.rendererId].value[model_path]) {
+      this.formControlMapper[this.rendererId][id] &#x3D;
+        this.modelForm[this.rendererId].controls[model_path];
+    } else {
+      this.formControlMapper[this.rendererId][id] &#x3D; new FormControl(value, {
+        validators: this.nDynamicRendererService.prepareValidators(
+          section.leafs[index].metadata?.options?.validations
+        ),
+        updateOn: section.leafs[index].metadata?.updateOn || &#x27;blur&#x27;,
+      });
+    }
+
+    this.modelForm[this.rendererId].addControl(
+      model_path,
+      this.formControlMapper[this.rendererId][id]
+    );
+
+    this.typeMapper[model_path] &#x3D;
+      section.leafs[index].metadata?.options?.validations?.type || &#x27;text&#x27;;
+    // }
+
+    if (!valid) {
+      this.ajv?.errors?.forEach((error: any) &#x3D;&gt; this.errorEmit(error));
+    }
+  }
+
+  /**
+   * Returns the component instance to the Dynamic Renderer
+   * @param metadata - Contains the information what component to render
+   * @returns - Component Instance
+   */
+  getComponent(metadata: Metadata): any {
+    try {
+      return this.nDynamicRendererService.getComponents(metadata);
+    } catch (error) {
+      this.errorEmit(error);
+    }
+  }
+
+  /**
+   *Passes the inputs that needs to be passed as inputs to the Dynamic Renderer
+   * @param leaf - Metadata which has inputs
+   * @returns - Returns the inputs that needs to be passed as inputs to the Dynamic Renderer
+   */
+  getInputs(leaf: any) {
+    try {
+      if (leaf &amp;&amp; leaf?.metadata &amp;&amp; leaf?.id) {
+        leaf.metadata.options.formController &#x3D;
+          this.formControlMapper[this.rendererId][leaf.id] ||
+          new FormControl(&#x27;&#x27;);
+        if (leaf.metadata.options?.model_path) {
+          leaf.metadata.options.type &#x3D;
+            this.nDynamicRendererService.getInputType(
+              leaf.metadata.options?.validations?.type || &#x27;text&#x27;
+            );
+        }
+        if (this.nDynamicRendererService.modifyOptions[leaf.id]) {
+          leaf.metadata.options &#x3D; {
+            ...leaf.metadata.options,
+            ...this.nDynamicRendererService.modifyOptions[leaf.id],
+          };
+        }
+
+        leaf.metadata.options.edit &#x3D; this.appMetadata?.edit;
+        leaf.metadata.options.appMetadata &#x3D; { ...this.appMetadata };
+        leaf.metadata.options.componentRefs &#x3D;
+          this.nDynamicRendererService.ComponentReference;
+
+        return leaf.metadata.options;
+      }
+      return leaf?.metadata?.options || {};
+    } catch (error) {
+      this.errorEmit(error);
+    }
+  }
+
+  /**
+   * Detects the formcontrol changes of all the formcontrols registered with the formGroup
+   */
+
+  formChangeDetection() {
+    try {
+      this.modelForm[this.rendererId].valueChanges.subscribe((v: any) &#x3D;&gt; {
+        // console.log(v);
+        this.parseModel();
+        this.detectErrorsOnFormControls();
+        this.nDynamicRendererService.updateObject(
+          this.modelForm[this.rendererId].value,
+          this.model,
+          this.schema,
+          (updatedModel: any) &#x3D;&gt; {
+            this.modelChange.emit(updatedModel);
+          },
+          (errors: any) &#x3D;&gt; {
+            errors?.forEach((error: any) &#x3D;&gt; this.errorEmit(error));
+          }
+        );
+      });
+    } catch (error) {
+      this.errorEmit(error);
+    }
+  }
+  touchedControls(modelForm: any) {
+    let formControls &#x3D; modelForm.controls;
+    let touchedControls &#x3D; {};
+    for (let control in formControls) {
+      if (formControls[control].touched) {
+        touchedControls[control] &#x3D; formControls[control];
+      }
+    }
+
+    return touchedControls;
+  }
+
+  detectErrorsOnFormControls() {
+    let message &#x3D; &#x27;&#x27;;
+    let errors &#x3D; this.collectErrors(this.modelForm[this.rendererId]);
+    let touchedControls &#x3D; this.touchedControls(this.modelForm[this.rendererId]);
+    let disableObj &#x3D; {};
+    let rendererId &#x3D; {};
+    if (errors &amp;&amp; Object.keys(errors)?.length &gt; 0) {
+      this.errorEmit(errors);
+      rendererId[this.rendererId] &#x3D; true;
+    } else {
+      this.errorEmit(errors);
+      rendererId[this.rendererId] &#x3D; false;
+    }
+    disableObj[&#x27;disableSave&#x27;] &#x3D; rendererId;
+    this.changeDetection.emit(disableObj);
+    let errorMessages &#x3D; {};
+    if (errors) {
+      for (let error in errors) {
+        let field &#x3D; error
+          .split(&#x27;.&#x27;)
+          .pop()
+          .replace(/([a-z0-9])([A-Z])/g, &#x27;$1 $2&#x27;)
+          .replace(&#x27;-&#x27;, &#x27;&#x27;)
+          .replace(&#x27;_&#x27;, &#x27; &#x27;)
+          .replace(&#x27;-&#x27;, &#x27; &#x27;)
+          .replace(&#x27;_&#x27;, &#x27; &#x27;);
+        field &#x3D; field.charAt(0).toUpperCase() + field.slice(1);
+
+        if (error) {
+          message &#x3D; &#x60;${field} is invalid&#x60;;
+          if (errors[error][&#x27;required&#x27;]) {
+            message &#x3D; &#x60;${field} is a required property.&#x60;;
+          }
+          if (errors[error][&#x27;minlength&#x27;]) {
+            message &#x3D; &#x60; The minimum length for the field ${field} is ${errors[error].minlength.requiredLength} characters.&#x60;;
+          }
+          if (errors[error][&#x27;maxlength&#x27;]) {
+            message &#x3D; &#x60; The maximum length for the field ${field} is ${errors[error].maxlength.requiredLength} characters.&#x60;;
+          }
+          if (errors[error][&#x27;min&#x27;]) {
+            message &#x3D; &#x60; The minimum value for the field ${field} is ${errors[error].min.min}.&#x60;;
+          }
+          if (errors[error][&#x27;max&#x27;]) {
+            message &#x3D; &#x60; The maximum value for the field ${field} is ${errors[error].max.max}.&#x60;;
+          }
+          if (errors[error][&#x27;email&#x27;]) {
+            message &#x3D; &#x60;Enter a valid email address.&#x60;;
+          }
+          if (errors[error][&#x27;pattern&#x27;]) {
+            message &#x3D; &#x60;The entered value doesn&#x27;t match the pattern ${errors[error].pattern.requiredPattern}.&#x60;;
+          }
+          if (errors[error][&#x27;idNoLengthCheckError&#x27;]) {
+            message &#x3D; &#x60;The ${field} should be of length 9 or 12 characters.&#x60;;
+          }
+          if (errors[error][&#x27;noSpecialCharactersError&#x27;]) {
+            message &#x3D; &#x60;The ${field} should not contain special characters.&#x60;;
+          }
+          if (errors[error][&#x27;idNoBirthCerError&#x27;]) {
+            message &#x3D; &#x60;The ${field} should be of length 12 characters.&#x60;;
+          }
+        }
+
+        let path &#x3D; error.split(&#x27;.&#x27;).slice(0, -1).join(&#x27;.&#x27;);
+        if (errorMessages[path]) {
+          errorMessages[path].push(message);
+        } else {
+          errorMessages[path] &#x3D; [];
+          errorMessages[path].push(message);
+        }
+      }
+      for (let validation in errorMessages) {
+        let newKey &#x3D; &#x60;${validation}.validations&#x60;;
+        if (this.modelForm[this.rendererId]?.controls[newKey]) {
+          this.modelForm[this.rendererId].controls[newKey].value &#x3D;
+            errorMessages[validation];
+        }
+      }
+      window[&#x27;NRenderer&#x27;]?.errorMonitering(
+        this.modelForm[this.rendererId].controls,
+        errorMessages
+      );
+    } else {
+      if (touchedControls) {
+        for (let error in touchedControls) {
+          let path &#x3D; error.split(&#x27;.&#x27;).slice(0, -1).join(&#x27;.&#x27;);
+          let newKey &#x3D; &#x60;${path}.validations&#x60;;
+          if (this.modelForm[this.rendererId]?.controls[newKey]) {
+            this.modelForm[this.rendererId].controls[newKey].value &#x3D; null;
+          }
+        }
+      }
+    }
+  }
+
+  isFormGroup(control: AbstractControl): control is FormGroup {
+    return !!(&lt;FormGroup&gt;control).controls;
+  }
+
+  collectErrors(control: AbstractControl): any | null {
+    if (this.isFormGroup(control)) {
+      return Object.entries(control.controls).reduce(
+        (acc, [key, childControl]) &#x3D;&gt; {
+          const childErrors &#x3D; this.collectErrors(childControl);
+          if (childErrors) {
+            acc &#x3D; { ...acc, [key]: childErrors };
+          }
+          return acc;
+        },
+        null
+      );
+    } else {
+      return control.errors;
+    }
+  }
+
+  /**
+   * Decides whether the component to be rendered on the UI
+   * @param validators - Gets the expression to be evaluted .
+   * @returns - A boolean whether to show the component.
+   */
+  componentValidation(metadata: Metadata) {
+    try {
+      if (metadata?.expression) {
+        return this.nDynamicRendererService.evaluateExpression(
+          metadata.expression,
+          this.model
+        );
+      }
+      return true;
+    } catch (error) {
+      this.errorEmit(error);
+    }
+  }
+
+  /**
+   * This function updates the model on every formcontrol change
+   */
+
+  parseModel() {
+    for (let i in this.modelForm[this.rendererId].value) {
+      switch (this.typeMapper[i]) {
+        case &#x27;number&#x27;:
+          this.modelForm[this.rendererId].value[i] &#x3D; Number(
+            this.modelForm[this.rendererId].value[i]
+          );
+          break;
+        case &#x27;boolean&#x27;:
+          this.modelForm[this.rendererId].value[i] &#x3D; Boolean(
+            this.modelForm[this.rendererId].value[i]
+          );
+          break;
+        default:
+      }
+    }
+  }
+
+  /**
+   * Executes the functions passed as args
+   * @param result - Its array of functions that needs to be executed
+   */
+  async outputMethods(change_event: any) {
+    try {
+      if (change_event?.functions) {
+        await this.nDynamicRendererService.callFunction(
+          change_event?.functions,
+          this.rendererId,
+          this.model,
+          this.viewPanels,
+          this.schema,
+          (updatedModel: any) &#x3D;&gt; {
+            this.modelChange.emit(updatedModel);
+          },
+          (errors: any) &#x3D;&gt; {
+            errors?.forEach((error: any) &#x3D;&gt; this.errorEmit(error));
+          }
+        );
+      }
+      // if (change_event?.clientNumber &amp;&amp; change_event?.section) {
+        if(!change_event?.init){
+          this.changeDetection.emit(change_event);
+        }
+      // }
+    } catch (error) {
+      this.errorEmit(error);
+    }
+  }
+
+  /**
+   * Get the View class and applying the default classes
+   * @param stylesClass - Classes from the View.
+   * @param category - Category of the styles.
+   * @returns - string | string[]  | { [klass: string]: any; }
+   */
+  getClass(stylesClass: any, category: any) {
+    if (stylesClass &amp;&amp; typeof stylesClass &#x3D;&#x3D; &#x27;string&#x27;) {
+      return stylesClass + &#x27; &#x27; + &#x60;${category}-default-styles&#x60;;
+    }
+    if (stylesClass &amp;&amp; Array.isArray(stylesClass)) {
+      stylesClass.push(&#x60;${category}-default-styles&#x60;);
+    }
+    if (stylesClass &amp;&amp; Object.keys(stylesClass).length &gt; 0) {
+      stylesClass[&#x60;${category}-default-styles&#x60;] &#x3D;&#x3D; true;
+    }
+    return &#x60;${category}-default-styles&#x60;;
+  }
+
+  readModel(model_path: any) {
+    if (model_path?.startsWith(&#x27;@&#x27;)) {
+      model_path &#x3D; model_path.substr(1);
+      return this.nDynamicRendererService.readModel(model_path, this.model);
+    }
+    return model_path;
+  }
+  /**
+   * Validates the object with the schema.
+   * @param obj {object} - The object to be validated.
+   * @param schema {object} - Schema.
+   * @returns {Boolean} - Returns a boolean based on the validation.
+   */
+
+  validateObjectWithSchema(obj: any, schema: any, appMetadata?: any) {
+    if (appMetadata?.validateSchema) {
+      return this.ajv.validate(schema, obj);
+    }
+    return true;
+  }
+
+  /**
+   * Error event which fires when ever an error pops up in the component.
+   * @param error
+   */
+  errorEmit(error: any) {
+    this.onError.emit(error);
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;form
+  *ngIf&#x3D;&quot;viewPanels?.length&quot;
+  [formGroup]&#x3D;&quot;modelForm[rendererId]&quot;
+  fxFlex&#x3D;&quot;100&quot;
+  fxLayout&#x3D;&quot;row wrap&quot;
+  class&#x3D;&quot;dynamic-renderer&quot;
+&gt;
+  &lt;div
+    [ngStyle]&#x3D;&quot;panel?.styles&quot;
+    [ngClass]&#x3D;&quot;panel?.class&quot;
+    *ngFor&#x3D;&quot;let panel of viewPanels&quot;
+    [fxFlex.lt-md]&#x3D;&quot;panel?.layout?.mobile?.flex || &#x27;100&#x27;&quot;
+    [fxFlex.md]&#x3D;&quot;panel?.layout?.tablet?.flex || &#x27;50&#x27;&quot;
+    [fxFlex.lg]&#x3D;&quot;panel?.layout?.desktop?.flex || &#x27;33&#x27;&quot;
+    [fxFlex.xl]&#x3D;&quot;panel?.layout?.tv?.flex || &#x27;20&#x27;&quot;
+  &gt;
+    &lt;mat-accordion class&#x3D;&quot;renderer-expansion-panel-accordion&quot;&gt;
+      &lt;mat-expansion-panel
+        [hideToggle]&#x3D;&quot;panel?.hideToggle&quot;
+        [expanded]&#x3D;&quot;panel?.expanded&quot;
+        class&#x3D;&quot;renderer-expansion-panel&quot;
+        [id]&#x3D;&quot;panel?.panel_name&quot;
+      &gt;
+        &lt;mat-expansion-panel-header class&#x3D;&quot;panel-header&quot;&gt;
+          &lt;mat-panel-title class&#x3D;&quot;panel-title&quot;&gt;
+            &lt;img
+              *ngIf&#x3D;&quot;panel?.icon&quot;
+              class&#x3D;&quot;panel-icon&quot;
+              [src]&#x3D;&quot;panel?.icon&quot;
+              alt&#x3D;&quot;logo&quot;
+            /&gt;
+            &lt;span class&#x3D;&quot;&quot;&gt;{{ readModel(panel?.panel_name) }} &lt;/span&gt;
+          &lt;/mat-panel-title&gt;
+        &lt;/mat-expansion-panel-header&gt;
+        &lt;div fxFlex&#x3D;&quot;100&quot; fxLayout&#x3D;&quot;row wrap&quot; class&#x3D;&quot;panel-container&quot;&gt;
+          &lt;div
+            *ngFor&#x3D;&quot;let section of panel?.sections&quot;
+            [ngStyle]&#x3D;&quot;section?.section?.styles&quot;
+            fxLayout&#x3D;&quot;row wrap&quot;
+            [ngClass]&#x3D;&quot;section?.section?.class&quot;
+            [fxFlex.lt-md]&#x3D;&quot;section?.section?.layout?.mobile?.flex || &#x27;100&#x27;&quot;
+            [fxFlex.md]&#x3D;&quot;section?.section?.layout?.tablet?.flex || &#x27;50&#x27;&quot;
+            [fxFlex.lg]&#x3D;&quot;section?.section?.layout?.desktop?.flex || &#x27;33&#x27;&quot;
+            [fxFlex.xl]&#x3D;&quot;section?.section?.layout?.tv?.flex || &#x27;20&#x27;&quot;
+          &gt;
+            &lt;!--Expansion panel not shown when the &#x27;expansion&#x27; flag is false--&gt;
+            &lt;div
+              *ngIf&#x3D;&quot;!section.section.expansion&quot;
+              fxFlex&#x3D;&quot;100&quot;
+              fxLayout&#x3D;&quot;row wrap&quot;
+              class&#x3D;&quot;section-container&quot;
+            &gt;
+              &lt;div
+                [innerHtml]&#x3D;&quot;&quot;
+                fxFlex&#x3D;&quot;100&quot;
+                class&#x3D;&quot;section-title&quot;
+                *ngIf&#x3D;&quot;section?.section?.section_name&quot;
+              &gt;
+                {{ readModel(section?.section?.section_name) }}
+              &lt;/div&gt;
+              &lt;div
+                fxFlex&#x3D;&quot;100&quot;
+                fxLayout&#x3D;&quot;row wrap&quot;
+                class&#x3D;&quot;section-expansion-body&quot;
+              &gt;
+                &lt;div
+                  *ngFor&#x3D;&quot;let leaf of section.section.leafs&quot;
+                  class&#x3D;&quot;section-leaf&quot;
+                  [ngStyle]&#x3D;&quot;leaf?.styles&quot;
+                  [fxFlex.lt-md]&#x3D;&quot;leaf?.layout?.mobile?.flex || &#x27;100&#x27;&quot;
+                  [fxFlex.md]&#x3D;&quot;leaf?.layout?.tablet?.flex || &#x27;50&#x27;&quot;
+                  [fxFlex.lg]&#x3D;&quot;leaf?.layout?.desktop?.flex || &#x27;33&#x27;&quot;
+                  [fxFlex.xl]&#x3D;&quot;leaf?.layout?.tv?.flex || &#x27;20&#x27;&quot;
+                  [ngClass]&#x3D;&quot;leaf?.class&quot;
+                  [style.display]&#x3D;&quot;
+                    componentValidation(leaf.metadata) ? &#x27;&#x27; : &#x27;none&#x27;
+                  &quot;
+                &gt;
+                &lt;ndc-dynamic
+                [ndcDynamicComponent]&#x3D;&quot;getComponent(leaf.metadata)&quot;
+                [ndcDynamicInputs]&#x3D;&quot;getInputs(leaf)&quot;
+                [ndcDynamicOutputs]&#x3D;&quot;outputs&quot;
+                style&#x3D;&quot;width: 100%&quot;
+                class&#x3D;&quot;leaf-components&quot;
+                (ndcDynamicCreated)&#x3D;&quot;componentCreated($event, leaf.metadata)&quot;
+              &gt;
+              &lt;/ndc-dynamic&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!--Expansion panel is shown when the &#x27;expansion&#x27; flag is true--&gt;
+            &lt;div
+              *ngIf&#x3D;&quot;section.section.expansion&quot;
+              fxFlex&#x3D;&quot;100&quot;
+              fxLayout&#x3D;&quot;row wrap&quot;
+              class&#x3D;&quot;section-container&quot;
+            &gt;
+              &lt;mat-expansion-panel
+                [hideToggle]&#x3D;&quot;section.section?.hideToggle&quot;
+                [expanded]&#x3D;&quot;section.section?.expanded&quot;
+                class&#x3D;&quot;section-expansion-panel&quot;
+                [id]&#x3D;&quot;panel?.panel_name + section.section?.section_name&quot;
+              &gt;
+                &lt;mat-expansion-panel-header
+                  class&#x3D;&quot;section-expansion-panel-header&quot;
+                &gt;
+                  &lt;mat-panel-title class&#x3D;&quot;section-expansion-panel-title&quot;&gt;
+                    &lt;img
+                      *ngIf&#x3D;&quot;section.section?.icon&quot;
+                      class&#x3D;&quot;section-icon&quot;
+                      [src]&#x3D;&quot;section.section?.icon&quot;
+                      alt&#x3D;&quot;logo&quot;
+                    /&gt;
+                    &lt;span class&#x3D;&quot;&quot;&gt;{{
+                      readModel(section?.section?.section_name)
+                    }}&lt;/span&gt;
+                  &lt;/mat-panel-title&gt;
+                &lt;/mat-expansion-panel-header&gt;
+                &lt;div
+                  fxFlex&#x3D;&quot;100&quot;
+                  fxLayout&#x3D;&quot;row wrap&quot;
+                  class&#x3D;&quot;section-expansion-body&quot;
+                &gt;
+                  &lt;div
+                    *ngFor&#x3D;&quot;let leaf of section.section.leafs;&quot;
+                    class&#x3D;&quot;section-leaf&quot;
+                    [ngStyle]&#x3D;&quot;leaf?.styles&quot;
+                    [fxFlex.lt-md]&#x3D;&quot;leaf?.layout?.mobile?.flex || &#x27;100&#x27;&quot;
+                    [fxFlex.md]&#x3D;&quot;leaf?.layout?.tablet?.flex || &#x27;50&#x27;&quot;
+                    [fxFlex.lg]&#x3D;&quot;leaf?.layout?.desktop?.flex || &#x27;33&#x27;&quot;
+                    [fxFlex.xl]&#x3D;&quot;leaf?.layout?.tv?.flex || &#x27;20&#x27;&quot;
+                    [ngClass]&#x3D;&quot;leaf?.class&quot;
+                    [style.display]&#x3D;&quot;
+                      componentValidation(leaf.metadata) ? &#x27;&#x27; : &#x27;none&#x27;
+                    &quot;
+                  &gt;
+                    &lt;ndc-dynamic
+                      [ndcDynamicComponent]&#x3D;&quot;getComponent(leaf.metadata)&quot;
+                      [ndcDynamicInputs]&#x3D;&quot;getInputs(leaf)&quot;
+                      [ndcDynamicOutputs]&#x3D;&quot;outputs&quot;
+                      style&#x3D;&quot;width: 100%&quot;
+                      class&#x3D;&quot;leaf-components&quot;
+                      (ndcDynamicCreated)&#x3D;&quot;componentCreated($event, leaf.metadata)&quot;
+                    &gt;
+                    &lt;/ndc-dynamic&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/mat-expansion-panel&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/mat-expansion-panel&gt;
+    &lt;/mat-accordion&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="styleData">
+                <p class="comment">
+                    <code>./n-dynamic-renderer.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">.mat-expansion-panel {
+    box-shadow: none !important;
+    border: 2px solid #F5F5F5 !important;
+    width: 100% !important;
+
+} 
+ /* .mat-expansion-panel-body {
+        padding: 1.5em !important
+} */
+.section-title {
+margin-bottom: 1em;
+font-weight: 600;
+}
+.panel-title , .section-expansion-panel-title {
+align-items: center
+}
+.panel-margin {
+margin: 1em 1.8em 1em 1.8em
+}
+.panel-header , .section-expansion-panel-header {
+border-bottom: 2px solid #f5f5f5;
+margin-bottom: -3px;
+align-items: center;
+}
+.section-card {
+border-radius: 4px;
+padding: 1rem;
+border: 1px solid #e0e0e0;
+}
+.panel-icon , .section-icon {
+margin-right: 1em;
+/* width: 25px;
+height: 25px; */
+}
+
+.section-expansion-body{
+    margin-top: 2em;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
 
     
 </div>
@@ -1210,7 +3060,7 @@
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><form  *ngIf="viewPanels?.length"  [formGroup]="modelForm"  fxFlex="100"  fxLayout="row wrap"  class="dynamic-renderer">  <div    *ngFor="let panel of viewPanels"    class="panel-renderer"    [ngStyle]="panel?.styles"    [ngClass]="panel?.class"    [fxFlex.lt-md]="panel?.layout?.mobile?.flex || \'100\'"    [fxFlex.md]="panel?.layout?.tablet?.flex || \'50\'"    [fxFlex.lg]="panel?.layout?.desktop?.flex || \'33\'"    [fxFlex.xl]="panel?.layout?.tv?.flex || \'20\'"  >    <mat-accordion class="renderer-expansion-panel-accordion">      <mat-expansion-panel        [hideToggle]="panel?.hideToggle"        [expanded]="panel?.expanded"      >        <mat-expansion-panel-header>          <mat-panel-title>            {{ panel?.panel_name }}          </mat-panel-title>          <mat-panel-description> </mat-panel-description>        </mat-expansion-panel-header>        <div fxFlex="100" fxLayout="row wrap" class="panel-container">          <div            *ngFor="let section of panel?.sections"            class="panel-sections"            [ngStyle]="section?.section?.styles"            fxLayout="row wrap"            [ngClass]="section?.section?.class"            [fxFlex.lt-md]="section?.section?.layout?.mobile?.flex || \'100\'"            [fxFlex.md]="section?.section?.layout?.tablet?.flex || \'50\'"            [fxFlex.lg]="section?.section?.layout?.desktop?.flex || \'33\'"            [fxFlex.xl]="section?.section?.layout?.tv?.flex || \'20\'"          >            <mat-card              fxFlex="100"              fxLayout="column nowrap"              style="height: 100%"            >              <div                class="panel-section-container"                fxLayout="row wrap"                style="width: 100%"                class="panel-section-container"              >                <div                  *ngFor="let leaf of section.section.leafs"                  class="section-leaf"                  [ngStyle]="leaf?.styles"                  [fxFlex.lt-md]="leaf?.layout?.mobile?.flex || \'100\'"                  [fxFlex.md]="leaf?.layout?.tablet?.flex || \'50\'"                  [fxFlex.lg]="leaf?.layout?.desktop?.flex || \'33\'"                  [fxFlex.xl]="leaf?.layout?.tv?.flex || \'20\'"                  [ngClass]="leaf?.class"                  [style.display]="                    componentValidation(leaf.metadata) ? \'\' : \'none\'                  "                >                  <ng-container                    [ngComponentOutlet]="getComponent(leaf.metadata)"                    [ndcDynamicInputs]="getInputs(leaf)"                    [ndcDynamicOutputs]="outputs"                    style="width: 100%"                    class="leaf-components"                  >                  </ng-container>                </div>              </div>            </mat-card>          </div>        </div>      </mat-expansion-panel>    </mat-accordion>  </div></form></div>'
+        var COMPONENT_TEMPLATE = '<div><form  *ngIf="viewPanels?.length"  [formGroup]="modelForm[rendererId]"  fxFlex="100"  fxLayout="row wrap"  class="dynamic-renderer">  <div    [ngStyle]="panel?.styles"    [ngClass]="panel?.class"    *ngFor="let panel of viewPanels"    [fxFlex.lt-md]="panel?.layout?.mobile?.flex || \'100\'"    [fxFlex.md]="panel?.layout?.tablet?.flex || \'50\'"    [fxFlex.lg]="panel?.layout?.desktop?.flex || \'33\'"    [fxFlex.xl]="panel?.layout?.tv?.flex || \'20\'"  >    <mat-accordion class="renderer-expansion-panel-accordion">      <mat-expansion-panel        [hideToggle]="panel?.hideToggle"        [expanded]="panel?.expanded"        class="renderer-expansion-panel"        [id]="panel?.panel_name"      >        <mat-expansion-panel-header class="panel-header">          <mat-panel-title class="panel-title">            <img              *ngIf="panel?.icon"              class="panel-icon"              [src]="panel?.icon"              alt="logo"            />            <span class="">{{ readModel(panel?.panel_name) }} </span>          </mat-panel-title>        </mat-expansion-panel-header>        <div fxFlex="100" fxLayout="row wrap" class="panel-container">          <div            *ngFor="let section of panel?.sections"            [ngStyle]="section?.section?.styles"            fxLayout="row wrap"            [ngClass]="section?.section?.class"            [fxFlex.lt-md]="section?.section?.layout?.mobile?.flex || \'100\'"            [fxFlex.md]="section?.section?.layout?.tablet?.flex || \'50\'"            [fxFlex.lg]="section?.section?.layout?.desktop?.flex || \'33\'"            [fxFlex.xl]="section?.section?.layout?.tv?.flex || \'20\'"          >            <!--Expansion panel not shown when the \'expansion\' flag is false-->            <div              *ngIf="!section.section.expansion"              fxFlex="100"              fxLayout="row wrap"              class="section-container"            >              <div                [innerHtml]=""                fxFlex="100"                class="section-title"                *ngIf="section?.section?.section_name"              >                {{ readModel(section?.section?.section_name) }}              </div>              <div                fxFlex="100"                fxLayout="row wrap"                class="section-expansion-body"              >                <div                  *ngFor="let leaf of section.section.leafs"                  class="section-leaf"                  [ngStyle]="leaf?.styles"                  [fxFlex.lt-md]="leaf?.layout?.mobile?.flex || \'100\'"                  [fxFlex.md]="leaf?.layout?.tablet?.flex || \'50\'"                  [fxFlex.lg]="leaf?.layout?.desktop?.flex || \'33\'"                  [fxFlex.xl]="leaf?.layout?.tv?.flex || \'20\'"                  [ngClass]="leaf?.class"                  [style.display]="                    componentValidation(leaf.metadata) ? \'\' : \'none\'                  "                >                <ndc-dynamic                [ndcDynamicComponent]="getComponent(leaf.metadata)"                [ndcDynamicInputs]="getInputs(leaf)"                [ndcDynamicOutputs]="outputs"                style="width: 100%"                class="leaf-components"                (ndcDynamicCreated)="componentCreated($event, leaf.metadata)"              >              </ndc-dynamic>                </div>              </div>            </div>            <!--Expansion panel is shown when the \'expansion\' flag is true-->            <div              *ngIf="section.section.expansion"              fxFlex="100"              fxLayout="row wrap"              class="section-container"            >              <mat-expansion-panel                [hideToggle]="section.section?.hideToggle"                [expanded]="section.section?.expanded"                class="section-expansion-panel"                [id]="panel?.panel_name + section.section?.section_name"              >                <mat-expansion-panel-header                  class="section-expansion-panel-header"                >                  <mat-panel-title class="section-expansion-panel-title">                    <img                      *ngIf="section.section?.icon"                      class="section-icon"                      [src]="section.section?.icon"                      alt="logo"                    />                    <span class="">{{                      readModel(section?.section?.section_name)                    }}</span>                  </mat-panel-title>                </mat-expansion-panel-header>                <div                  fxFlex="100"                  fxLayout="row wrap"                  class="section-expansion-body"                >                  <div                    *ngFor="let leaf of section.section.leafs;"                    class="section-leaf"                    [ngStyle]="leaf?.styles"                    [fxFlex.lt-md]="leaf?.layout?.mobile?.flex || \'100\'"                    [fxFlex.md]="leaf?.layout?.tablet?.flex || \'50\'"                    [fxFlex.lg]="leaf?.layout?.desktop?.flex || \'33\'"                    [fxFlex.xl]="leaf?.layout?.tv?.flex || \'20\'"                    [ngClass]="leaf?.class"                    [style.display]="                      componentValidation(leaf.metadata) ? \'\' : \'none\'                    "                  >                    <ndc-dynamic                      [ndcDynamicComponent]="getComponent(leaf.metadata)"                      [ndcDynamicInputs]="getInputs(leaf)"                      [ndcDynamicOutputs]="outputs"                      style="width: 100%"                      class="leaf-components"                      (ndcDynamicCreated)="componentCreated($event, leaf.metadata)"                    >                    </ndc-dynamic>                  </div>                </div>              </mat-expansion-panel>            </div>          </div>        </div>      </mat-expansion-panel>    </mat-accordion>  </div></form></div>'
     var COMPONENTS = [{'name': 'NDynamicRendererComponent', 'selector': 'n-dynamic-renderer'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'NDynamicRendererComponent'};

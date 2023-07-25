@@ -47,7 +47,7 @@
   <li class="breadcrumb-item">Interfaces</li>
   <li class="breadcrumb-item"
   >
-  Section</li>
+  Validations</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -79,8 +79,16 @@
                 <h3>Description</h3>
             </p>
             <p class="comment">
-                <p>Each item in the Section is containerised by a card and styles,layout can be set on the Section level.</p>
-
+                <p>Validations are to ensure that the data entered by users is accurate and meets our application&#39;s requirements.
+we have default angular validations as well as custom validations.</p>
+<div><pre class="line-numbers"><code class="language-none">type - the data type of the component.
+dependencyValidations - Defines the validations that needs to be added on other components based on certain conditions of the current compoent.
+Example -
+&quot;validations&quot;: {
+&quot;type&quot;: &quot;string&quot;,
+&quot;required&quot;: true,
+&quot;dependencyValidations&quot;: []
+}</code></pre></div>
             </p>
 
 
@@ -98,29 +106,23 @@
                             <ul class="index-list">
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#class" 
+                                        <a href="#dependencyValidations" 
 >
-                                            class
+                                            dependencyValidations
                                         </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#layout" 
+                                        <a href="#required" 
 >
-                                            layout
-                                        </a>
-                                </li>
-                                <li>
-                                        <a href="#leafs" 
->
-                                            leafs
+                                            required
                                         </a>
                                 </li>
                                 <li>
                                             <span class="modifier">Optional</span>
-                                        <a href="#styles" 
+                                        <a href="#type" 
 >
-                                            styles
+                                            type
                                         </a>
                                 </li>
                             </ul>
@@ -138,9 +140,9 @@
                         <tbody>
                                 <tr>
                                     <td class="col-md-4">
-                                        <a name="class"></a>
-                                        <span class="name "><b>class</b>
-                                            <a href="#class">
+                                        <a name="dependencyValidations"></a>
+                                        <span class="name "><b>dependencyValidations</b>
+                                            <a href="#dependencyValidations">
                                                 <span class="icon ion-ios-link"></span>
                                             </a>
                                         </span>
@@ -148,7 +150,83 @@
                                 </tr>
                                 <tr>
                                     <td class="col-md-4">
-                                        <code>class:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                        <code>dependencyValidations:     <code>DependencyValidations[]</code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>    <code>DependencyValidations[]</code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="required"></a>
+                                        <span class="name "><b>required</b>
+                                            <a href="#required">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>required:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+</code>
+                                    </td>
+                                </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <i>Optional</i>
+                                        </td>
+                                    </tr>
+
+
+
+
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <a name="type"></a>
+                                        <span class="name "><b>type</b>
+                                            <a href="#type">
+                                                <span class="icon ion-ios-link"></span>
+                                            </a>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <code>type:         <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
 </code>
                                     </td>
                                 </tr>
@@ -157,115 +235,6 @@
                                     <tr>
                                         <td class="col-md-4">
                                             <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="layout"></a>
-                                        <span class="name "><b>layout</b>
-                                            <a href="#layout">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>layout:         <code><a href="../interfaces/KeyValue.html" target="_self" >KeyValue</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/KeyValue.html" target="_self" >KeyValue</a></code>
-
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Optional</i>
-                                        </td>
-                                    </tr>
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="leafs"></a>
-                                        <span class="name "><b>leafs</b>
-                                            <a href="#leafs">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>leafs:         <code><a href="../interfaces/Leaf.html" target="_self" >Leaf[]</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/Leaf.html" target="_self" >Leaf[]</a></code>
-
-                                        </td>
-                                    </tr>
-
-
-
-
-
-                        </tbody>
-                    </table>
-                    <table class="table table-sm table-bordered">
-                        <tbody>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <a name="styles"></a>
-                                        <span class="name "><b>styles</b>
-                                            <a href="#styles">
-                                                <span class="icon ion-ios-link"></span>
-                                            </a>
-                                        </span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-md-4">
-                                        <code>styles:         <code><a href="../interfaces/KeyValue.html" target="_self" >KeyValue</a></code>
-</code>
-                                    </td>
-                                </tr>
-
-
-                                    <tr>
-                                        <td class="col-md-4">
-                                            <i>Type : </i>        <code><a href="../interfaces/KeyValue.html" target="_self" >KeyValue</a></code>
 
                                         </td>
                                     </tr>
@@ -509,7 +478,7 @@ export interface Flex {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
-            var COMPODOC_CURRENT_PAGE_URL = 'Section.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'Validations.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
